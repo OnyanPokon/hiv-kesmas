@@ -1,3 +1,4 @@
+/* eslint-disable space-infix-ops */
 /* eslint-disable no-shadow */
 import { Button, Timeline } from 'flowbite-react';
 import React, { useEffect, useState } from 'react';
@@ -18,10 +19,9 @@ function Visit() {
     return <div>Loading...</div>;
   }
 
-  // const handlePackage = () => {
-  //   console.log('button click');
-  //   window.location.href = 'https://chatgpt.com/c/08402c67-32c4-4644-be33-ca18b0dd6430';
-  // };
+  const handlePackage = (doctor) => {
+    window.location.href = `https://wa.me/081242219002?text=Hello%20saya%20${doctor.name}`;
+  };
   return (
     <>
       <section className="bg-slate-100">
@@ -104,12 +104,12 @@ function Visit() {
               Eaque quisquam esse tenetur omnis.
             </p>
           </div>
-          <div className="col-span-6 w-full flex items-center gap-x-4">
+          <div className="col-span-6 w-full flex  gap-x-4">
             {data.home_visit.doctors.map((doctor) => (
               <div key={doctor.id} className="group flex flex-col gap-y-4 p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
                 <div className="relative w-full flex items-center justify-center mb-6">
                   <div className="absolute bg-white backdrop-blur-xl p-2 shadow-md rounded-full -translate-y-8 ">
-                    <img src="/profile/home-visit/visiti-1.png" alt="" className="rounded-full w-28 h-28" />
+                    <img src={`${doctor.img_url}`} alt="" className="rounded-full w-28 h-28" />
                   </div>
                 </div>
                 <div className="flex flex-col gap-y-px text-sm">
@@ -140,7 +140,7 @@ function Visit() {
                   </div>
                 </div>
                 <div>
-                  <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info">
+                  <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage(doctor)}>
                     Booking IDR
                     {' '}
                     {doctor.cost}

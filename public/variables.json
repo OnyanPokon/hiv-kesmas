@@ -4,6 +4,7 @@
       {
         "id" : "HV1",
         "name" : "Aldiyalsah Lumula, A.Md.Kep",
+        "img_url" : "/profile/home-visit/visiti-2.png",
         "study" : "S2 - Keperawatan",
         "specialist" : "Penagangan HIV",
         "cost" : "Rp.450.000",
@@ -18,7 +19,7 @@
             "benefit" : "Tanpa Potongan Pajak"
           },
           {
-            "id" : "HV1-B2",
+            "id" : "HV1-B3",
             "benefit" : "Gratis Konsultasi Obat"
           }
         ]
@@ -27,6 +28,7 @@
         "id" : "HV2",
         "name" : "Ns. Vica Octavia Lasulika, S.Kep",
         "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/home-visit/visiti-1.png",
         "specialist" : "Penagangan HIV",
         "cost" : "Rp.450.000",
         "discount" : "Rp.500.000",
@@ -40,7 +42,15 @@
             "benefit" : "Tanpa Potongan Pajak"
           },
           {
-            "id" : "HV2-B2",
+            "id" : "HV2-B3",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "HV2-B4",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "HV2-B5",
             "benefit" : "Gratis Konsultasi Obat"
           }
         ]
