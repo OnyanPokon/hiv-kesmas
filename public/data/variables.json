@@ -1,0 +1,50 @@
+{
+  "home_visit" : {
+    "doctors" : [
+      {
+        "id" : "HV1",
+        "name" : "Aldiyalsah Lumula, A.Md.Kep",
+        "study" : "S2 - Keperawatan",
+        "specialist" : "Penagangan HIV",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "HV1-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "HV1-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "HV1-B2",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      },
+      {
+        "id" : "HV2",
+        "name" : "Ns. Vica Octavia Lasulika, S.Kep",
+        "study" : "S1 - Keperawatan",
+        "specialist" : "Penagangan HIV",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "HV2-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "HV2-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "HV2-B2",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      }
+    ]
+  }  
+}

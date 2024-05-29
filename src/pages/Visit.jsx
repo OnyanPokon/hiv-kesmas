@@ -1,13 +1,27 @@
+/* eslint-disable no-shadow */
 import { Button, Timeline } from 'flowbite-react';
-import React from 'react';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import React, { useEffect, useState } from 'react';
 import { HiCalendar, HiCheck } from 'react-icons/hi2';
 
 function Visit() {
-  const handlePackage = () => {
-    console.log('button click');
-    window.location.href = 'https://chatgpt.com/c/08402c67-32c4-4644-be33-ca18b0dd6430';
-  };
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    // Fetch data from the JSON file
+    fetch('/variables.json')
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.error('Error fetching data:', error));
+  }, []);
+
+  if (!data) {
+    return <div>Loading...</div>;
+  }
+
+  // const handlePackage = () => {
+  //   console.log('button click');
+  //   window.location.href = 'https://chatgpt.com/c/08402c67-32c4-4644-be33-ca18b0dd6430';
+  // };
   return (
     <>
       <section className="bg-slate-100">
@@ -91,96 +105,49 @@ function Visit() {
             </p>
           </div>
           <div className="col-span-6 w-full flex items-center gap-x-4">
-            <div className="group flex flex-col gap-y-4 p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
-              <div className="relative w-full flex items-center justify-center mb-6">
-                <div className="absolute bg-white backdrop-blur-xl p-2 shadow-md rounded-full -translate-y-8 ">
-                  <img src="/profile/home-visit/visiti-1.png" alt="" className="rounded-full w-28 h-28" />
+            {data.home_visit.doctors.map((doctor) => (
+              <div key={doctor.id} className="group flex flex-col gap-y-4 p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
+                <div className="relative w-full flex items-center justify-center mb-6">
+                  <div className="absolute bg-white backdrop-blur-xl p-2 shadow-md rounded-full -translate-y-8 ">
+                    <img src="/profile/home-visit/visiti-1.png" alt="" className="rounded-full w-28 h-28" />
+                  </div>
+                </div>
+                <div className="flex flex-col gap-y-px text-sm">
+                  Nama Dokter :
+                  <span className="text-lg font-semibold">{doctor.name}</span>
+                </div>
+                <div className="flex flex-col gap-y-px text-sm">
+                  Pendidikan :
+                  <span className="text-lg font-semibold">{doctor.study}</span>
+                </div>
+                <div className="flex flex-col gap-y-2 text-sm">
+                  Spesialis :
+                  <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">{doctor.specialist}</span>
+                </div>
+                <div className="flex flex-col gap-y-2 mt-6">
+                  <span className="text-3xl  font-extrabold">{doctor.cost}</span>
+                  <span className="text-sm font-semibold">
+                    <s>{doctor.discount}</s>
+                    {' '}
+                  </span>
+                  <div className="flex flex-col gap-y-2 mt-4">
+                    {doctor.benefits.map((benefit) => (
+                      <span className="inline-flex items-center gap-x-2">
+                        <HiCheck />
+                        {benefit.benefit}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info">
+                    Booking IDR
+                    {' '}
+                    {doctor.cost}
+                  </Button>
                 </div>
               </div>
-              <div className="flex flex-col gap-y-px text-sm">
-                Nama Dokter :
-                <span className="text-lg font-semibold">Mohamad Rafiq Daud</span>
-              </div>
-              <div className="flex flex-col gap-y-px text-sm">
-                Pendidikan :
-                <span className="text-lg font-semibold">Sarjana Kesehatan</span>
-              </div>
-              <div className="flex flex-col gap-y-2 text-sm">
-                Spesialis :
-                <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">HIV dan Penyakit Dalam</span>
-              </div>
-              <div className="flex flex-col gap-y-2 mt-6">
-                <span className="text-3xl  font-extrabold">Rp.450.000</span>
-                <span className="text-sm font-semibold">
-                  <s>Rp.650.000</s>
-                  {' '}
-                </span>
-                <div className="flex flex-col gap-y-2 mt-4">
-                  <span className="inline-flex items-center gap-x-2">
-                    <HiCheck />
-                    Bebas Pengajuan Jadwal
-                  </span>
-                  <span className="inline-flex items-center gap-x-2">
-                    <HiCheck />
-                    Tanpa Potongan Pajak
-                  </span>
-                  <span className="inline-flex items-center gap-x-2">
-                    <HiCheck />
-                    Gratis Konsultasi Obat
-                  </span>
-                </div>
-              </div>
-              <div>
-                <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info">
-                  Booking IDR 950K
-                </Button>
-              </div>
-            </div>
-            <div className="group flex flex-col gap-y-4 p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
-              <div className="relative w-full flex items-center justify-center mb-6">
-                <div className="absolute bg-white backdrop-blur-xl p-2 shadow-md rounded-full -translate-y-8 ">
-                  <img src="/profile/home-visit/visiti-1.png" alt="" className="rounded-full w-28 h-28" />
-                </div>
-              </div>
-              <div className="flex flex-col gap-y-px text-sm">
-                Nama Dokter :
-                <span className="text-lg font-semibold">Mohamad Rafiq Daud</span>
-              </div>
-              <div className="flex flex-col gap-y-px text-sm">
-                Pendidikan :
-                <span className="text-lg font-semibold">Sarjana Kesehatan</span>
-              </div>
-              <div className="flex flex-col gap-y-2 text-sm">
-                Spesialis :
-                <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">HIV dan Penyakit Dalam</span>
-              </div>
-              <div className="flex flex-col gap-y-2 mt-6">
-                <span className="text-3xl  font-extrabold">Rp.450.000</span>
-                <span className="text-sm font-semibold">
-                  <s>Rp.650.000</s>
-                  {' '}
-                </span>
-                <div className="flex flex-col gap-y-2 mt-4">
-                  <span className="inline-flex items-center gap-x-2">
-                    <HiCheck />
-                    Bebas Pengajuan Jadwal
-                  </span>
-                  <span className="inline-flex items-center gap-x-2">
-                    <HiCheck />
-                    Tanpa Potongan Pajak
-                  </span>
-                  <span className="inline-flex items-center gap-x-2">
-                    <HiCheck />
-                    Gratis Konsultasi Obat
-                  </span>
-                </div>
-              </div>
-              <div>
-                <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage()}>
-                  Booking IDR 950K
-                </Button>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

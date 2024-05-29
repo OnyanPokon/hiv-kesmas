@@ -13,6 +13,49 @@ const customTheme = {
       white_success: 'border border-transparent bg-white text-color-success-500 focus:ring-4 focus:ring-color-success-400 enabled:hover:bg-gray-100',
     },
   },
+  timeline: {
+    root: {
+      direction: {
+        horizontal: 'sm:flex',
+        vertical: 'relative border-l border-gray-200 ',
+      },
+    },
+    item: {
+      root: {
+        horizontal: 'relative mb-6 sm:mb-0',
+        vertical: 'mb-10 ml-6',
+      },
+      content: {
+        root: {
+          base: 'mt-3 sm:pr-8',
+        },
+        body: {
+          base: 'mb-4 text-base font-normal text-gray-500 ',
+        },
+        time: {
+          base: 'mb-1 text-sm font-normal leading-none text-gray-400 ',
+        },
+        title: {
+          base: 'text-lg font-semibold text-gray-900 ',
+        },
+      },
+      point: {
+        horizontal: 'flex items-center',
+        line: 'hidden h-0.5 w-full bg-gray-200 ',
+        marker: {
+          base: {
+            horizontal: 'absolute -left-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 ',
+            vertical: 'absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 ',
+          },
+          icon: {
+            base: 'h-3 w-3 text-cyan-600',
+            wrapper: 'absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-200 ring-8 ring-white ',
+          },
+        },
+        vertical: '',
+      },
+    },
+  },
 };
 
 export default customTheme;
