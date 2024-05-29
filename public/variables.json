@@ -6,7 +6,7 @@
         "name" : "Aldiyalsah Lumula, A.Md.Kep",
         "img_url" : "/profile/home-visit/visiti-2.png",
         "study" : "S2 - Keperawatan",
-        "specialist" : "Penagangan HIV",
+        "specialist" : "Conselor HIV",
         "cost" : "Rp.450.000",
         "discount" : "Rp.500.000",
         "benefits" : [
@@ -29,7 +29,7 @@
         "name" : "Ns. Vica Octavia Lasulika, S.Kep",
         "study" : "S1 - Keperawatan",
         "img_url" : "/profile/home-visit/visiti-1.png",
-        "specialist" : "Penagangan HIV",
+        "specialist" : "Conselor HIV",
         "cost" : "Rp.450.000",
         "discount" : "Rp.500.000",
         "benefits" : [
@@ -56,5 +56,229 @@
         ]
       }
     ]
-  }  
+  },
+  "screening" : {
+    "accessor" : [
+      {
+        "id" : "S1",
+        "name" : "Ronaldi M. Nani",
+        "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/screen/onal.png",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "S1-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "S1-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "S1-B3",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "S1-B4",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "S1-B5",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      },
+      {
+        "id" : "S2",
+        "name" : "Siti Sarifatul Aini",
+        "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/screen/siti.png",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "S2-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "S2-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "S2-B3",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "S2-B4",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "S2-B5",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      },
+      {
+        "id" : "S3",
+        "name" : "Anggun Cita Sasmi",
+        "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/screen/anggun.png",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "S3-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "S3-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "S3-B3",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "S3-B4",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "S3-B5",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      }
+    ]
+  },
+  "nurses" : {
+    "nurse" : [
+      {
+        "id" : "N1",
+        "name" : "Andreas Malatani",
+        "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/pendamping/andreas.png",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "N1-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "N1-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "N1-B3",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "N1-B4",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "N1-B5",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      },
+      {
+        "id" : "N2",
+        "name" : "Yunisa Bakari",
+        "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/pendamping/yunisa.png",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "N2-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "N2-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "N2-B3",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "N2-B4",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "N2-B5",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      }
+    ]
+  },
+  "education" : {
+    "educators" : [
+      {
+        "id" : "E1",
+        "name" : "Moh. Ramadhan Ismail",
+        "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/edukasi/ramadhan.png",
+        "specialist" : "Educator HIV",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "E1-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "E1-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "E1-B3",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "E1-B4",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "E1-B5",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      },
+      {
+        "id" : "E2",
+        "name" : "Ns. Nirwanto K. Rahim, S.Kep., M.Kep",
+        "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/edukasi/nirwanto.png",
+        "specialist":"Educator HIV",
+        "cost" : "Rp.450.000",
+        "discount" : "Rp.500.000",
+        "benefits" : [
+          {
+            "id" : "E2-B1",
+            "benefit" : "Bebas Pengajuan Jadwal"
+          },
+          {
+            "id" : "E2-B2",
+            "benefit" : "Tanpa Potongan Pajak"
+          },
+          {
+            "id" : "E2-B3",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "E2-B4",
+            "benefit" : "Gratis Konsultasi Obat"
+          },
+          {
+            "id" : "E2-B5",
+            "benefit" : "Gratis Konsultasi Obat"
+          }
+        ]
+      }
+    ]
+  }
 }

@@ -4,7 +4,7 @@ import { Button, Timeline } from 'flowbite-react';
 import React, { useEffect, useState } from 'react';
 import { HiCalendar, HiCheck } from 'react-icons/hi2';
 
-function Visit() {
+function Edukasi() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
@@ -28,11 +28,10 @@ function Visit() {
         <div className="grid max-w-screen-xl items-center min-h-screen px-8 py-24 pt-32 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div className="mr-auto place-self-cent er lg:col-span-7">
             <h1 className="max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl text-color-info-500">
-              Home Visit VCT
+              Edukasi HIV
             </h1>
             <p className="max-w-xl mb-6 font-bold lg:mb-8 md:text-lg lg:text-2xl ">
-              Bertemu dengan perawat ahli dibidangnya dan nikmati pelayanan atas
-              keluhanmu
+              Tambah pengetahuan tentang HIV agar semakin waspada dengan virus HIV
             </p>
             <Button pill color="primary" size="lg">
               Telusuri Sekarang
@@ -40,7 +39,7 @@ function Visit() {
           </div>
           <div className="mt-16 lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="/illustration/visit-hero.png"
+              src="/illustration/edukasi-hero.png"
               alt="mockup"
               className="w-7/8 h-7/8"
             />
@@ -50,7 +49,7 @@ function Visit() {
       <section className="bg-white">
         <div className="max-w-screen-lg mx-auto flex flex-col lg:flex-row  gap-y-12 gap-x-12 py-24 px-8">
           <div className="w-full">
-            <h2 className="mb-4 text-2xl  md:text-4xl tracking-tight font-extrabold text-color-info-500">Home Visit VCT</h2>
+            <h2 className="mb-4 text-2xl  md:text-4xl tracking-tight font-extrabold text-color-info-500">Edukasi HIV</h2>
             <p className="max-w-lg text-sm md:text-base font-semibold">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Assumenda eius veritatis tempore alias perspiciatis fuga?
@@ -62,7 +61,7 @@ function Visit() {
               <Timeline.Item>
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
-                  <Timeline.Title>Pesan Paket Home Visit VCT</Timeline.Title>
+                  <Timeline.Title>Pesan Paket Edukasi HIV</Timeline.Title>
                   <Timeline.Body>
                     Pilih perawat sesukamu, cek ketersediaan
                     perawat dan lakukan pemesanan melalui whatsapp admin
@@ -72,20 +71,20 @@ function Visit() {
               <Timeline.Item>
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
-                  <Timeline.Title>Penjadwalan Home Visit</Timeline.Title>
+                  <Timeline.Title>Penjadwalan Edukasi</Timeline.Title>
                   <Timeline.Body>
                     Pesanan anda akan di proses oleh admin 1x24 jam,
-                    dan admin akan mengatur penjadwalan untuk Home Visit VCT
+                    dan admin akan mengatur penjadwalan untuk Edukasi HIV
                   </Timeline.Body>
                 </Timeline.Content>
               </Timeline.Item>
               <Timeline.Item>
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
-                  <Timeline.Title>Home Visit</Timeline.Title>
+                  <Timeline.Title>Edukasi</Timeline.Title>
                   <Timeline.Body>
                     Setelah penjadwalan berhasil di setujui,
-                    layanan Home Visit VCT siap di lakukan sesuai dengan jadwal yang disetujui
+                    layanan Edukasi HIV siap di lakukan sesuai dengan jadwal yang disetujui
                   </Timeline.Body>
                 </Timeline.Content>
               </Timeline.Item>
@@ -104,34 +103,34 @@ function Visit() {
             </p>
           </div>
           <div className="col-span-12 lg:col-span-6 w-full flex flex-col lg:flex-row md:px-24 lg:px-0 gap-x-6 gap-y-24">
-            {data.home_visit.doctors.map((doctor) => (
-              <div key={doctor.id} className="group flex flex-col justify-between p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
+            {data.education.educators.map((educator) => (
+              <div key={educator.id} className="group flex flex-col justify-between p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
                 <div className="flex flex-col gap-y-4">
                   <div className="relative w-full flex items-center justify-center mb-12">
                     <div className="absolute bg-white backdrop-blur-xl p-2 shadow-md rounded-full -translate-y-8 ">
-                      <img src={`${doctor.img_url}`} alt="" className="rounded-full w-28 h-28" />
+                      <img src={`${educator.img_url}`} alt="" className="rounded-full w-28 h-28" />
                     </div>
                   </div>
                   <div className="flex flex-col gap-y-px text-sm">
                     Nama Dokter :
-                    <span className=" font-semibold">{doctor.name}</span>
+                    <span className=" font-semibold">{educator.name}</span>
                   </div>
                   <div className="flex flex-col gap-y-px text-sm">
                     Pendidikan :
-                    <span className=" font-semibold">{doctor.study}</span>
+                    <span className=" font-semibold">{educator.study}</span>
                   </div>
                   <div className="flex flex-col gap-y-2 text-sm">
                     Pekerjaan :
-                    <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">{doctor.specialist}</span>
+                    <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">{educator.specialist}</span>
                   </div>
                   <div className="flex flex-col gap-y-2 mt-6">
-                    <span className="text-3xl  font-extrabold">{doctor.cost}</span>
+                    <span className="text-3xl  font-extrabold">{educator.cost}</span>
                     <span className="text-sm font-semibold">
-                      <s>{doctor.discount}</s>
+                      <s>{educator.discount}</s>
                       {' '}
                     </span>
                     <div className="flex flex-col gap-y-2 mt-4">
-                      {doctor.benefits.map((benefit) => (
+                      {educator.benefits.map((benefit) => (
                         <span className="inline-flex items-center gap-x-2">
                           <HiCheck />
                           {benefit.benefit}
@@ -141,10 +140,10 @@ function Visit() {
                   </div>
                 </div>
                 <div>
-                  <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage(doctor)}>
+                  <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage(educator)}>
                     Chat
                     {' '}
-                    {doctor.cost}
+                    {educator.cost}
                   </Button>
                 </div>
               </div>
@@ -156,4 +155,4 @@ function Visit() {
   );
 }
 
-export default Visit;
+export default Edukasi;

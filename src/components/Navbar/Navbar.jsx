@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Button } from 'flowbite-react';
+import { Button, Dropdown } from 'flowbite-react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 
-import { HiMenu, HiUser } from 'react-icons/hi';
-import { appMenus, navMenus } from './variables';
+import { HiMenu } from 'react-icons/hi';
+import { navMenus } from './variables';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,14 +22,32 @@ function Navbar() {
               <li><img src="/logo/logo.png" alt="" className="w-12" /></li>
             </ul>
           </div>
-          <Button color="default" onClick={openMenu} className="lg:hidden">
+          <Button color="info" onClick={openMenu} className="lg:hidden">
             <HiMenu />
           </Button>
           <div className="hidden lg:block">
-            <ul className="flex items-center gap-10 text-color-primary-500">
-              <li><Link to="/" className="font-semibold text-base">Beranda</Link></li>
-              <li><Link to="/schoolprofile" className="font-semibold text-base">Profile</Link></li>
-              <li><Link to="/galery" className="font-semibold text-base">Galeri</Link></li>
+            <ul className="flex items-center gap-10 text-color-info-500 text-lg">
+              <li><Link to="/" className="font-bold text-base">Beranda</Link></li>
+
+              <Dropdown
+                label=""
+                dismissOnClick={false}
+                renderTrigger={() => <li className="font-bold text-base hover:cursor-pointer">Layanan</li>}
+              >
+                <Dropdown.Item>
+                  <Link to="/visit">Home Visit</Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link to="/screening">Screening</Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link to="/Pendampingan">Pendampingan</Link>
+                </Dropdown.Item>
+                <Dropdown.Item>
+                  <Link to="/Edukasi">Edukasi HIV</Link>
+                </Dropdown.Item>
+              </Dropdown>
+              <li><Link to="/galery" className="font-bold text-base">Tentang Kami</Link></li>
             </ul>
           </div>
         </div>
@@ -47,30 +65,6 @@ function Navbar() {
               </NavLink>
             </li>
           ))}
-        </ul>
-      </div>
-
-      <div className="lg:hidden fixed bottom-0 bg-white w-full p-3 shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
-        <ul className="flex justify-around">
-          {appMenus.map((menu) => (
-            <li className="flex items-center flex-col gap-1" key={menu.id}>
-              <NavLink
-                to={menu.path}
-                // className="flex items-center flex-col gap-1"
-                className={({ isActive }) => (`flex items-center flex-col gap-1 ${isActive ? 'text-color-warning-500' : 'text-slate-400'}`)}
-
-              >
-                <span>{menu.icon}</span>
-                <p className="text-xs">{menu.text}</p>
-              </NavLink>
-            </li>
-          ))}
-          <li className="flex items-center flex-col gap-1 text-slate-400">
-            <Link to="/login" className="flex items-center flex-col gap-1">
-              <span><HiUser /></span>
-              <p className="text-xs">Masuk</p>
-            </Link>
-          </li>
         </ul>
       </div>
     </nav>

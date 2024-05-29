@@ -28,22 +28,32 @@ export const appMenus = [
 export const navMenus = [
   {
     id: 1,
-    path: '/teachers',
-    text: 'Guru dan tenaga pengajar',
+    path: '/',
+    text: 'Beranda',
   },
   {
     id: 2,
-    path: '/vision',
-    text: 'Visi dan misi',
+    path: '/visit',
+    text: 'Visiti',
   },
   {
     id: 3,
-    path: '/academicinfo',
-    text: 'Informasi akademik',
+    path: '/screening',
+    text: 'Screening',
   },
   {
     id: 4,
-    path: '/ppdb',
-    text: 'PPDB',
+    path: '/pendampingan',
+    text: 'Pendampingan',
+  },
+  {
+    id: 5,
+    path: '/edukasi',
+    text: 'Edukasi',
+  },
+  {
+    id: 5,
+    path: '/tentang',
+    text: 'Tentang Kami',
   },
 ];
