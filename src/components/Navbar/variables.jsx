@@ -51,9 +51,4 @@ export const navMenus = [
     path: '/edukasi',
     text: 'Edukasi',
   },
-  {
-    id: 5,
-    path: '/tentang',
-    text: 'Tentang Kami',
-  },
 ];

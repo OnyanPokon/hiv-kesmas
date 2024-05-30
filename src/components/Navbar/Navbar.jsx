@@ -47,7 +47,6 @@ function Navbar() {
                   <Link to="/Edukasi">Edukasi HIV</Link>
                 </Dropdown.Item>
               </Dropdown>
-              <li><Link to="/galery" className="font-bold text-base">Tentang Kami</Link></li>
             </ul>
           </div>
         </div>

@@ -60,9 +60,9 @@ function Visit() {
           <div className="w-full">
             <h2 className="mb-4 text-2xl  md:text-4xl tracking-tight font-extrabold text-color-info-500">Home Visit VCT</h2>
             <p className="max-w-lg text-sm md:text-base font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda eius veritatis tempore alias perspiciatis fuga?
-              Eaque quisquam esse tenetur omnis.
+              Nikmati kenyamanan layanan Home Visit VCT (Voluntary Counseling and Testing)
+              yang inovatif, dimana Anda dapat memesan perawat profesional untuk
+              melakukan kunjungan langsung ke rumah Anda
             </p>
           </div>
           <div className="w-full">
@@ -106,9 +106,8 @@ function Visit() {
           <div className="w-full col-span-12 lg:col-span-6 mb-24 flex flex-col items-center justify-center lg:items-start lg:justify-start">
             <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-extrabold text-color-info-500">Pilih Paket</h2>
             <p className="max-w-lg text-sm md:text-base font-semibold text-center lg:text-left px-4 lg:px-0">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda eius veritatis tempore alias perspiciatis fuga?
-              Eaque quisquam esse tenetur omnis.
+              Kami menyediakan berbagai pilihan paket yang dirancang
+              untuk memenuhi berbagai kebutuhan dan preferensi Anda.
             </p>
           </div>
           <div className="col-span-12 lg:col-span-6 w-full flex flex-col lg:flex-row md:px-24 lg:px-0 gap-x-6 gap-y-24">

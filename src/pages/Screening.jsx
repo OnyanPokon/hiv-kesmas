@@ -58,9 +58,8 @@ function Screening() {
           <div className="w-full">
             <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-extrabold text-color-info-500">Screening HIV</h2>
             <p className="max-w-lg text-sm md:text-base font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda eius veritatis tempore alias perspiciatis fuga?
-              Eaque quisquam esse tenetur omnis.
+              Kini, lebih mudah bagi Anda untuk memastikan
+              kesehatan dengan fitur baru kami untuk screening HIV.
             </p>
           </div>
           <div className="w-full">
@@ -104,9 +103,8 @@ function Screening() {
           <div className="w-full col-span-12 flex items-center flex-col justify-center mb-24">
             <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-extrabold text-color-info-500">Pilih Paket</h2>
             <p className="max-w-lg text-sm md:text-base px-4 font-semibold text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Assumenda eius veritatis tempore alias perspiciatis fuga?
-              Eaque quisquam esse tenetur omnis.
+              Kami menyediakan berbagai pilihan paket yang dirancang
+              untuk memenuhi berbagai kebutuhan dan preferensi Anda.
             </p>
           </div>
           <div className="col-span-12  w-full flex flex-col lg:flex-row md:px-24 gap-x-6 gap-y-24">
