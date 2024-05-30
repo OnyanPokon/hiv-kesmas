@@ -54,7 +54,7 @@ function Screening() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="max-w-screen-lg mx-auto flex flex-col lg:flex-row  gap-y-12 gap-x-12 py-24 px-8">
+        <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row  gap-y-12 gap-x-12 py-24 px-8">
           <div className="w-full">
             <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-extrabold text-color-info-500">Screening HIV</h2>
             <p className="max-w-lg text-sm md:text-base font-semibold">
@@ -116,7 +116,7 @@ function Screening() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-y-px text-sm">
-                  Nama Perawat :
+                  Nama Pemeriksa :
                   <span className="text-lg font-semibold">{accessor.name}</span>
                 </div>
                 <div className="flex flex-col gap-y-px text-sm">

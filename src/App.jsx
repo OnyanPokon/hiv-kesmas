@@ -9,6 +9,7 @@ import Screening from './pages/Screening';
 import Pendampingan from './pages/Pendampingan';
 import Edukasi from './pages/Edukasi';
 import Footer from './components/Footer/Footer';
+import Teman from './pages/Teman';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/screening" element={<Screening />} />
         <Route path="/pendampingan" element={<Pendampingan />} />
         <Route path="/edukasi" element={<Edukasi />} />
+        <Route path="/teman" element={<Teman />} />
       </Routes>
       <Footer />
     </Flowbite>

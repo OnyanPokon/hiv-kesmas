@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Dropdown } from 'flowbite-react';
+import { Button } from 'flowbite-react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 import { HiMenu } from 'react-icons/hi';
@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <nav className="font-Poppins w-full fixed z-10">
-      <div className="w-full bg-white py-4 border-b-2 border-color-info-500">
+      <div className="w-full bg-white py-3 border-b-2 border-color-info-500">
         <div className="max-w-screen-xl bg-white mx-auto flex justify-between items-center px-6 z-10">
           <div>
             <ul className="flex lg:gap-2 items-center list-none">
@@ -26,27 +26,37 @@ function Navbar() {
             <HiMenu />
           </Button>
           <div className="hidden lg:block">
-            <ul className="flex items-center gap-10 text-color-info-500 text-lg">
-              <li><Link to="/" className="font-bold text-base">Beranda</Link></li>
-
-              <Dropdown
-                label=""
-                dismissOnClick={false}
-                renderTrigger={() => <li className="font-bold text-base hover:cursor-pointer">Layanan</li>}
-              >
-                <Dropdown.Item>
-                  <Link to="/visit">Home Visit</Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Link to="/screening">Screening</Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Link to="/Pendampingan">Pendampingan</Link>
-                </Dropdown.Item>
-                <Dropdown.Item>
-                  <Link to="/Edukasi">Edukasi HIV</Link>
-                </Dropdown.Item>
-              </Dropdown>
+            <ul className="flex items-center gap-8 text-color-info-500 text-lg">
+              <li>
+                <NavLink to="/" className={({ isActive }) => (`font-bold text-base ${isActive ? 'text-color-primary-500' : 'text-color-info-500'}`)}>
+                  Beranda
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/visit" className={({ isActive }) => (`font-bold text-base ${isActive ? 'text-color-primary-500' : 'text-color-info-500'}`)}>
+                  Home Visit
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/screening" className={({ isActive }) => (`font-bold text-base ${isActive ? 'text-color-primary-500' : 'text-color-info-500'}`)}>
+                  Screening
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/pendampingan" className={({ isActive }) => (`font-bold text-base ${isActive ? 'text-color-primary-500' : 'text-color-info-500'}`)}>
+                  Pendampingan
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/edukasi" className={({ isActive }) => (`font-bold text-base ${isActive ? 'text-color-primary-500' : 'text-color-info-500'}`)}>
+                  Edukasi HIV
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/teman" className={({ isActive }) => (`font-bold text-base ${isActive ? 'text-color-primary-500' : 'text-color-info-500'}`)}>
+                  Teman Sebaya
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>

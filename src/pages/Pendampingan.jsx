@@ -39,8 +39,7 @@ function Pendampingan() {
               Pendampingan Minum Obat
             </h1>
             <p className="max-w-xl mb-6 font-bold lg:mb-8 md:text-lg lg:text-2xl ">
-              Para ahli setia menememani kamu dan memberikan
-              rekomendasi obat yang cocok dengan kondisimu
+              itu mo tulis Para ahli siap mendampingi pengobatanmu sampai kondisimu membaik
             </p>
             <Button pill color="primary" size="lg" onClick={scrollToTarget}>
               Telusuri Sekarang
@@ -56,7 +55,7 @@ function Pendampingan() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="max-w-screen-lg mx-auto flex flex-col lg:flex-row  gap-y-12 gap-x-12 py-24 px-8">
+        <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row  gap-y-12 gap-x-12 py-24 px-8">
           <div className="w-full">
             <h2 className="mb-4 text-2xl  md:text-4xl tracking-tight font-extrabold text-color-info-500">Pendampingan Minum Obat</h2>
             <p className="max-w-lg text-sm md:text-base font-semibold">
@@ -120,7 +119,7 @@ function Pendampingan() {
                     </div>
                   </div>
                   <div className="flex flex-col gap-y-px text-sm">
-                    Nama Dokter :
+                    Nama Pendamping :
                     <span className=" font-semibold">{nurse.name}</span>
                   </div>
                   <div className="flex flex-col gap-y-px text-sm">

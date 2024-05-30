@@ -4,44 +4,88 @@
       {
         "id" : "HV1",
         "package_name" : "Home Visit VCT",
-        "name" : "Aldiyalsah Lumula, A.Md.Kep",
-        "img_url" : "/profile/home-visit/visiti-2.png",
-        "study" : "S2 - Keperawatan",
+        "name" : "Ns. Vica Octavia Lasulika, S.Kep",
+        "study" : "S1 - Keperawatan",
+        "img_url" : "/profile/home-visit/visiti-1.png",
         "specialist" : "Conselor HIV",
-        "cost" : "Rp.250.000",
-        "discount" : "Rp.300.000",
-        "benefits" : [
+        "packages" : [
           {
-            "id" : "HV1-B1",
-            "benefit" : "Home Visit VCT"
+            "id" : "P1-HV1",
+            "cost" : "Rp.250.000",
+            "discount" : "Rp.280.000",
+            "benefits" : [
+              {
+                "id" : "P1-HV1-B1",
+                "benefit" : "Home Visit VCT"
+              },
+              {
+                "id" : "P1-HV1-B2",
+                "benefit" : "Screening HIV"
+              },
+              {
+                "id" : "P1-HV1-B3",
+                "benefit" : "Bebas Pengajuan Jadwal"
+              }
+            ]
           },
           {
-            "id" : "HV1-B1",
-            "benefit" : "Gratis Screening HIV"
-          },
-          {
-            "id" : "HV1-B1",
-            "benefit" : "Bebas Pengajuan Jadwal"
+            "id" : "P2-HV1",
+            "cost" : "Rp.35.000",
+            "discount" : "Rp.40.000",
+            "benefits" : [
+              {
+                "id" : "P2-HV1-B1",
+                "benefit" : "VCT Online (Zoom/Video Call)"
+              },
+              {
+                "id" : "P2-HV1-B2",
+                "benefit" : "Bebas Pengajuan Jadwal"
+              }
+            ]
           }
         ]
       },
       {
         "id" : "HV2",
         "package_name" : "Home Visit VCT",
-        "name" : "Ns. Vica Octavia Lasulika, S.Kep",
-        "study" : "S1 - Keperawatan",
-        "img_url" : "/profile/home-visit/visiti-1.png",
+        "name" : "Aldiyalsah Lumula, A.Md.Kep",
+        "img_url" : "/profile/home-visit/visiti-2.png",
+        "study" : "S2 - Keperawatan",
         "specialist" : "Conselor HIV",
-        "cost" : "Rp.100.000",
-        "discount" : "Rp.125.000",
-        "benefits" : [
+        "packages" : [
           {
-            "id" : "HV2-B1",
-            "benefit" : "VCT Online Via WhatsApp"
+            "id" : "P1-HV2",
+            "cost" : "Rp.25.000",
+            "discount" : "Rp.28.000",
+            "benefits" : [
+              {
+                "id" : "P1-HV2-B1",
+                "benefit" : "Home Visit VCT"
+              },
+              {
+                "id" : "P1-HV2-B2",
+                "benefit" : "Screening HIV"
+              },
+              {
+                "id" : "P1-HV2-B2",
+                "benefit" : "Bebas Pengajuan Jadwal"
+              }
+            ]
           },
           {
-            "id" : "HV2-B2",
-            "benefit" : "Bebas Pengajuan Jadwal"
+            "id" : "P2-HV2",
+            "cost" : "Rp.35.000",
+            "discount" : "Rp.40.000",
+            "benefits" : [
+              {
+                "id" : "P2-HV2-B1",
+                "benefit" : "VCT Online (Zoom/Video Call)"
+              },
+              {
+                "id" : "P2-HV2-B2",
+                "benefit" : "Bebas Pengajuan Jadwal"
+              }
+            ]
           }
         ]
       }
@@ -121,7 +165,7 @@
         "benefits" : [
           {
             "id" : "N1-B1",
-            "benefit" : "Paket 1 Bulan"
+            "benefit" : "Paket 1 Bulan Pendampingan"
           },
           {
             "id" : "N1-B2",
@@ -140,7 +184,7 @@
         "benefits" : [
           {
             "id" : "N2-B1",
-            "benefit" : "Paket 1 Bulan"
+            "benefit" : "Paket 1 Bulan Pendampingan"
           },
           {
             "id" : "N2-B2",
@@ -159,16 +203,36 @@
         "study" : "S1 - Keperawatan",
         "img_url" : "/profile/edukasi/ramadhan.png",
         "specialist" : "Educator HIV",
-        "cost" : "Rp.25.000",
-        "discount" : "Rp.28.000",
-        "benefits" : [
+        "packages" : [
           {
-            "id" : "E1-B1",
-            "benefit" : "Edukasi Via WhatsApp"
+            "id" : "P1-E1",
+            "cost" : "Rp.25.000",
+            "discount" : "Rp.28.000",
+            "benefits" : [
+              {
+                "id" : "P1-E1-B1",
+                "benefit" : "Edukasi Via WhatsApp"
+              },
+              {
+                "id" : "P1-E1-B2",
+                "benefit" : "Bebas Pengajuan Jadwal"
+              }
+            ]
           },
           {
-            "id" : "E1-B2",
-            "benefit" : "Bebas Pengajuan Jadwal"
+            "id" : "P2-E1",
+            "cost" : "Rp.35.000",
+            "discount" : "Rp.40.000",
+            "benefits" : [
+              {
+                "id" : "P2-E1-B1",
+                "benefit" : "Edukasi Via Zoom"
+              },
+              {
+                "id" : "P2-E1-B2",
+                "benefit" : "Bebas Pengajuan Jadwal"
+              }
+            ]
           }
         ]
       },
@@ -179,16 +243,56 @@
         "study" : "S1 - Keperawatan",
         "img_url" : "/profile/edukasi/nirwanto.png",
         "specialist":"Educator HIV",
-        "cost" : "Rp.35.000",
-        "discount" : "Rp.40.000",
-        "benefits" : [
+        "packages" : [
           {
-            "id" : "E2-B1",
-            "benefit" : "Edukasi Via Zoom atau Video Call"
+            "id" : "P1-E2",
+            "cost" : "Rp.25.000",
+            "discount" : "Rp.28.000",
+            "benefits" : [
+              {
+                "id" : "P1-E2-B1",
+                "benefit" : "Edukasi Via WhatsApp"
+              },
+              {
+                "id" : "P1-E2-B2",
+                "benefit" : "Bebas Pengajuan Jadwal"
+              }
+            ]
           },
           {
-            "id" : "E2-B2",
-            "benefit" : "Bebas Pengajuan Jadwal"
+            "id" : "P2-E2",
+            "cost" : "Rp.35.000",
+            "discount" : "Rp.40.000",
+            "benefits" : [
+              {
+                "id" : "P2-E2-B1",
+                "benefit" : "Edukasi Via Zoom"
+              },
+              {
+                "id" : "P2-E2-B2",
+                "benefit" : "Bebas Pengajuan Jadwal"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "friends" : {
+    "friend" : [
+      {
+        "id" : "F1",
+        "package_name" : "Temukan Teman Sebaya Terdekatmu",
+        "cost" : "Rp.25.000",
+        "discount" : "Rp.30.000",
+        "benefits" : [
+          {
+            "id" : "F1-B1",
+            "benefit" : "Rekomendasi Teman Sebaya"
+          },
+          {
+            "id" : "F1-B2",
+            "benefit" : "Interaksi Bersama Tanpa Batas"
           }
         ]
       }

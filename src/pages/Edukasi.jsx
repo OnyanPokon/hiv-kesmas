@@ -55,7 +55,7 @@ function Edukasi() {
         </div>
       </section>
       <section className="bg-white">
-        <div className="max-w-screen-lg mx-auto flex flex-col lg:flex-row  gap-y-12 gap-x-12 py-24 px-8">
+        <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row  gap-y-12 gap-x-12 py-24 px-8">
           <div className="w-full">
             <h2 className="mb-4 text-2xl  md:text-4xl tracking-tight font-extrabold text-color-info-500">Edukasi HIV</h2>
             <p className="max-w-lg text-sm md:text-base font-semibold">
@@ -118,7 +118,7 @@ function Edukasi() {
                     </div>
                   </div>
                   <div className="flex flex-col gap-y-px text-sm">
-                    Nama Dokter :
+                    Nama Pemeriksa :
                     <span className=" font-semibold">{educator.name}</span>
                   </div>
                   <div className="flex flex-col gap-y-px text-sm">
@@ -129,28 +129,35 @@ function Edukasi() {
                     Pekerjaan :
                     <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">{educator.specialist}</span>
                   </div>
-                  <div className="flex flex-col gap-y-2 mt-6">
-                    <span className="text-3xl  font-extrabold">{educator.cost}</span>
-                    <span className="text-sm font-semibold">
-                      <s>{educator.discount}</s>
-                      {' '}
-                    </span>
-                    <div className="flex flex-col gap-y-2 mt-4">
-                      {educator.benefits.map((benefit) => (
-                        <span className="inline-flex items-center gap-x-2">
-                          <HiCheck />
-                          {benefit.benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+
                 </div>
                 <div>
-                  <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage(educator)}>
-                    Chat
-                    {' '}
-                    {educator.cost}
-                  </Button>
+                  {educator.packages.map((paket) => (
+                    <>
+                      <div className="flex flex-col gap-y-2 mt-6">
+                        <span className="text-3xl  font-extrabold">{paket.cost}</span>
+                        <span className="text-sm font-semibold">
+                          <s>{paket.discount}</s>
+                          {' '}
+                        </span>
+                        <div
+                          className="flex flex-col gap-y-2 mt-4"
+                        >
+                          {paket.benefits.map((benefit) => (
+                            <span className="inline-flex items-center gap-x-2">
+                              <HiCheck />
+                              {benefit.benefit}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage(paket)}>
+                        Chat
+                        {' '}
+                        {paket.cost}
+                      </Button>
+                    </>
+                  ))}
                 </div>
               </div>
             ))}

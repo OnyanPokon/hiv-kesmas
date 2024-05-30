@@ -43,9 +43,10 @@ function Beranda() {
                   </div>
                   <p className="font-bold text-lg">Kenali HIV/AIDS lebih dekat</p>
                 </div>
-                <div className="text-sm">
-                  Gejala AIDS meliputi penurunan berat badan,
-                  demam atau keringat malam, dan kelelahan.
+                <div className="text-xs font-semibold">
+                  HIV (Human Immunodeficiency Virus) adalah virus yang menyerang
+                  sistem kekebalan tubuh yang dapat melemahkan kemampuan
+                  tubuh melawan infeksi dan penyakit.
                 </div>
               </div>
               <div className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm  rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500">
@@ -55,9 +56,11 @@ function Beranda() {
                   </div>
                   <p className="font-bold text-lg">Ayo cegah HIV/AIDS Bersama</p>
                 </div>
-                <div className="text-sm">
-                  Virus ini dapat ditularkan melalui
-                  kontak dengan darah yang terinfeksi.
+                <div className="text-xs font-semibold">
+                  AIDS (Acquired Immune Deficiency Syndrome)
+                  adalah kondisi di mana HIV sudah pada tahap
+                  infeksi akhir. Ketika seseorang sudah mengalami AIDS,
+                  tubuh tidak lagi memiliki kemampuan untuk melawan infeksi yang ditimbulkan.
                 </div>
               </div>
 
@@ -83,62 +86,15 @@ function Beranda() {
           </div>
           <div className="flex flex-col gap-y-2 w-full">
             <p className="text-white font-extrabold text-2xl lg:text-3xl">Gejala HIV/AIDS</p>
-            <p className="text-white text-xs lg:text-sm">
-              Gejala HIV/AIDS bervariasi tergantung pada tahap infeksi.
-              HIV (Human Immunodeficiency Virus) adalah virus yang menyerang
-              sistem kekebalan tubuh dan dapat menyebabkan AIDS
-              (Acquired Immunodeficiency Syndrome) jika tidak diobati.
+            <p className="text-white text-xs lg:text-base font-semibold">
+              Mengapa Harus HIVisitScreen?? Karena HIVisitScreen merupakan
+              media pemberi layanan yang akurat dan lengkap mengenai HIV/AIDS
+              dengan model platform modern yang inovatif, mudah digunakan,
+              dapat diakses siapapun dan kapanpun serta terpercaya yang
+              berkontribusi dalam mengakselerasi pertumbuhan ekonomi digital
+              serta memastikan kehidupan yang sehat dan sejahtera bagi semua
+              kalangan dengan tujuan bersama yaitu untuk Indonesia menuju three zero HIV/AIDS 2030.
             </p>
-            <div className="flex flex-col gap-y-2 font-semibold text-sm lg:text-base mt-4">
-              <div className="flex flex-col gap-y-2 text-white">
-                <div className="inline-flex gap-x-2">
-                  <span className="text-white text-xl flex items-center">
-                    <HiCheckCircle />
-                  </span>
-                  Demam
-                </div>
-              </div>
-              <div className="flex flex-col gap-y-2 text-white">
-                <div className="inline-flex gap-x-2">
-                  <span className="text-white text-xl flex items-center">
-                    <HiCheckCircle />
-                  </span>
-                  Pembengkakan Kelenjar Getah Bening
-                </div>
-              </div>
-              <div className="flex flex-col gap-y-2 text-white">
-                <div className="inline-flex gap-x-2">
-                  <span className="text-white text-xl flex items-center">
-                    <HiCheckCircle />
-                  </span>
-                  Sakit Tenggorokan
-                </div>
-              </div>
-              <div className="flex flex-col gap-y-2 text-white">
-                <div className="inline-flex gap-x-2">
-                  <span className="text-white text-xl flex items-center">
-                    <HiCheckCircle />
-                  </span>
-                  Ruam Kulit
-                </div>
-              </div>
-              <div className="flex flex-col gap-y-2 text-white">
-                <div className="inline-flex gap-x-2">
-                  <span className="text-white text-xl flex items-center">
-                    <HiCheckCircle />
-                  </span>
-                  Nyeri Otot Dan Sendi
-                </div>
-              </div>
-              <div className="flex flex-col gap-y-2 text-white">
-                <div className="inline-flex gap-x-2">
-                  <span className="text-white text-xl flex items-center">
-                    <HiCheckCircle />
-                  </span>
-                  Sakit Kepala Dan Kelelahan
-                </div>
-              </div>
-            </div>
           </div>
           <div />
         </div>
