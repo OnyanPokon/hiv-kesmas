@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Button } from 'flowbite-react';
 import {
   HiBeaker,
@@ -11,6 +11,14 @@ import { useNavigate } from 'react-router-dom';
 
 function Beranda() {
   const navigate = useNavigate();
+  const targetRef = useRef(null);
+
+  // Fungsi untuk menggulir ke elemen yang dituju
+  const scrollToTarget = () => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <>
       <section className="bg-slate-100">
@@ -22,7 +30,7 @@ function Beranda() {
               <span className="text-color-info-600">HIVisitScreen</span>
             </h1>
             <div className="inline-flex">
-              <Button size="lg" color="primary" pill>
+              <Button size="lg" color="primary" pill onClick={scrollToTarget}>
                 Telusuri Sekarang
                 <HiOutlineArrowRight className="ml-2 h-6 w-6" />
               </Button>
@@ -131,14 +139,11 @@ function Beranda() {
                 </div>
               </div>
             </div>
-            <Button className="w-fit mt-4" pill color="primary" size="sm">
-              Baca Selengkapnya
-            </Button>
           </div>
           <div />
         </div>
       </section>
-      <section className="bg-white ">
+      <section className="bg-white " ref={targetRef}>
         <div className="py-8 px-8 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
           <div className="max-w-screen-md mb-8 lg:mb-16">
             <h2 className="mb-2 text-2xl lg:text-4xl tracking-tight font-extrabold text-color-info-500">Apa yang Kami Tawarkan</h2>

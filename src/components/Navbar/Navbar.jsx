@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <nav className="font-Poppins w-full fixed z-10">
-      <div className="w-full bg-white py-4">
+      <div className="w-full bg-white py-4 border-b-2 border-color-info-500">
         <div className="max-w-screen-xl bg-white mx-auto flex justify-between items-center px-6 z-10">
           <div>
             <ul className="flex lg:gap-2 items-center list-none">

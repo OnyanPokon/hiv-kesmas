@@ -8,6 +8,7 @@ import Visit from './pages/Visit';
 import Screening from './pages/Screening';
 import Pendampingan from './pages/Pendampingan';
 import Edukasi from './pages/Edukasi';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/pendampingan" element={<Pendampingan />} />
         <Route path="/edukasi" element={<Edukasi />} />
       </Routes>
+      <Footer />
     </Flowbite>
   );
 }

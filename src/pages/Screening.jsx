@@ -1,10 +1,18 @@
 /* eslint-disable no-shadow */
 import { Button, Timeline } from 'flowbite-react';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { HiCalendar, HiCheck } from 'react-icons/hi2';
 
 function Screening() {
   const [data, setData] = useState(null);
+  const targetRef = useRef(null);
+
+  // Fungsi untuk menggulir ke elemen yang dituju
+  const scrollToTarget = () => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   useEffect(() => {
     // Fetch data from the JSON file
@@ -19,7 +27,7 @@ function Screening() {
   }
 
   const handlePackage = (doctor) => {
-    window.location.href = `https://wa.me/081242219002?text=Hello%20saya%20${doctor.name}`;
+    window.location.href = `https://wa.me/6281242219002?text=Halo%2C%0A%0ASaya%20ingin%20memesan%20layanan%20${doctor.package_name}%20dengan%20detail%20sebagai%20berikut%3A%0A%0AID%20Paket%3A%20${doctor.id}%0ANama%20Paket%3A%20${doctor.package_name}%0ANama%20Konselor%3A%20${doctor.name}%0AGelar%20Pendidikan%3A%20${doctor.study}%0AHarga%3A%20${doctor.cost}%20(diskon%20dari%20${doctor.discount}).`;
   };
   return (
     <>
@@ -32,7 +40,7 @@ function Screening() {
             <p className="max-w-xl mb-6 font-bold lg:mb-8 md:text-lg lg:text-2xl ">
               Periksa dan cek kondisi tubuh agar terbebas dari paparan infeksi HIV
             </p>
-            <Button pill color="primary" size="lg">
+            <Button pill color="primary" size="lg" onClick={scrollToTarget}>
               Telusuri Sekarang
             </Button>
           </div>
@@ -91,7 +99,7 @@ function Screening() {
           </div>
         </div>
       </section>
-      <section className="bg-slate-100">
+      <section className="bg-slate-100" ref={targetRef}>
         <div className="max-w-screen-xl mx-auto px-8 py-24 grid grid-cols-12 ">
           <div className="w-full col-span-12 flex items-center flex-col justify-center mb-24">
             <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-extrabold text-color-info-500">Pilih Paket</h2>
