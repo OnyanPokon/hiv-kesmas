@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from 'react-icons/fa';
+import {
+  FaFacebookF, FaInstagram, FaTiktok, FaYoutube,
+} from 'react-icons/fa';
 
 function Footer() {
   return (
@@ -49,7 +51,11 @@ function Footer() {
         </div>
       </div>
       <div className="w-full bg-slate-300 flex items-center justify-center p-6">
-        <p className="text-sm text-slate-500">© 2024, LuckProduction Studio. All rights reserved</p>
+        <p className="text-sm text-slate-500">
+          © 2024,
+          <a href="https://github.com/OnyanPokon">RfiqD</a>
+          . All rights reserved
+        </p>
       </div>
     </footer>
   );
