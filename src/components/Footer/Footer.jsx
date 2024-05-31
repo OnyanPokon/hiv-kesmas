@@ -4,6 +4,7 @@ import React from 'react';
 import {
   FaFacebookF, FaInstagram, FaTiktok, FaYoutube,
 } from 'react-icons/fa';
+import HistatsCounter from './HistatsCounter';
 
 function Footer() {
   return (
@@ -48,6 +49,9 @@ function Footer() {
               <FaTiktok />
             </a>
           </div>
+        </div>
+        <div className="lg:col-span-3 flex items-center gap-4">
+          <HistatsCounter></HistatsCounter>
         </div>
       </div>
       <div className="w-full bg-slate-300 flex items-center justify-center p-6">

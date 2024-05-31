@@ -35,7 +35,7 @@ Saya ingin memesan layanan Pendampingan Minum Obat dengan detail berikut :
 - Perawat : ${doctor.name}
 - Harga : ${doctor.cost} (diskon dari ${doctor.discount})`;
 
-    window.location.href = `https://wa.me/6281242219002?text=${encodeURIComponent(
+    window.location.href = `https://wa.me/6283840743617?text=${encodeURIComponent(
       message,
     )}`;
   };

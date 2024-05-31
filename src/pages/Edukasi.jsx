@@ -36,7 +36,7 @@ Saya ingin memesan layanan Edukasi HIV dengan detail berikut :
 - Spesialisasi : ${doctor.specialist}
 - Harga : ${packageData.cost} (diskon dari ${packageData.discount})`;
 
-    window.location.href = `https://wa.me/6281242219002?text=${encodeURIComponent(
+    window.location.href = `https://wa.me/6283840743617?text=${encodeURIComponent(
       message,
     )}`;
   };
