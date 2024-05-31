@@ -134,9 +134,6 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div className="lg:col-span-3 flex items-center gap-4">
-          <HistatsCounter></HistatsCounter>
-        </div>
       </div>
       <div className="w-full bg-slate-300 flex items-center justify-center p-6">
         <p className="text-sm text-slate-500">
