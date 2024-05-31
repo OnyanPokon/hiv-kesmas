@@ -27,8 +27,18 @@ function Edukasi() {
     return <div>Loading...</div>;
   }
 
-  const handlePackage = (doctor) => {
-    window.location.href = `https://wa.me/6281242219002?text=Halo%2C%0A%0ASaya%20ingin%20memesan%20layanan%20${doctor.package_name}%20dengan%20detail%20sebagai%20berikut%3A%0A%0AID%20Paket%3A%20${doctor.id}%0ANama%20Paket%3A%20${doctor.package_name}%0ANama%20Konselor%3A%20${doctor.name}%0AGelar%20Pendidikan%3A%20${doctor.study}%0ASpesialisasi%3A%20${doctor.specialist}%0AHarga%3A%20${doctor.cost}%20(diskon%20dari%20${doctor.discount}).`;
+  const handlePackage = (doctor, packageData) => {
+    const message = `*_Halo HIVCare Admin!_*
+Saya ingin memesan layanan Edukasi HIV dengan detail berikut :
+- ID Paket : ${packageData.id}
+- Nama Paket : ${doctor.package_name}
+- Konselor : ${doctor.name}
+- Spesialisasi : ${doctor.specialist}
+- Harga : ${packageData.cost} (diskon dari ${packageData.discount})`;
+
+    window.location.href = `https://wa.me/6281242219002?text=${encodeURIComponent(
+      message,
+    )}`;
   };
   return (
     <>
@@ -151,7 +161,7 @@ function Edukasi() {
                           ))}
                         </div>
                       </div>
-                      <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage(paket)}>
+                      <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage(educator, paket)}>
                         Chat
                         {' '}
                         {paket.cost}

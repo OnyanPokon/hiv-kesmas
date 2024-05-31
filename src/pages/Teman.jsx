@@ -27,7 +27,15 @@ function Teman() {
   }
 
   const handlePackage = (doctor) => {
-    window.location.href = `https://wa.me/6281242219002?text=Halo%2C%0A%0ASaya%20ingin%20memesan%20layanan%20${doctor.package_name}%20dengan%20detail%20sebagai%20berikut%3A%0A%0AID%20Paket%3A%20${doctor.id}%0ANama%20Paket%3A%20${doctor.package_name}%0ANama%20Konselor%3A%20${doctor.name}%0AGelar%20Pendidikan%3A%20${doctor.study}%0AHarga%3A%20${doctor.cost}%20(diskon%20dari%20${doctor.discount}).`;
+    const message = `*_Halo HIVCare Admin!_*
+Saya ingin memesan layanan Teman Sebaya dengan detail berikut :
+- ID Paket : ${doctor.id}
+- Nama Paket : ${doctor.package_name}
+- Harga : ${doctor.cost} (diskon dari ${doctor.discount})`;
+
+    window.location.href = `https://wa.me/6281242219002?text=${encodeURIComponent(
+      message,
+    )}`;
   };
   return (
     <section className="bg-white">

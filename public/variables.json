@@ -30,8 +30,8 @@
           },
           {
             "id" : "P2-HV1",
-            "cost" : "Rp.35.000",
-            "discount" : "Rp.40.000",
+            "cost" : "Rp.100.000",
+            "discount" : "Rp.150.000",
             "benefits" : [
               {
                 "id" : "P2-HV1-B1",
@@ -55,8 +55,8 @@
         "packages" : [
           {
             "id" : "P1-HV2",
-            "cost" : "Rp.25.000",
-            "discount" : "Rp.28.000",
+            "cost" : "Rp.250.000",
+            "discount" : "Rp.280.000",
             "benefits" : [
               {
                 "id" : "P1-HV2-B1",
@@ -74,8 +74,8 @@
           },
           {
             "id" : "P2-HV2",
-            "cost" : "Rp.35.000",
-            "discount" : "Rp.40.000",
+            "cost" : "Rp.100.000",
+            "discount" : "Rp.150.000",
             "benefits" : [
               {
                 "id" : "P2-HV2-B1",

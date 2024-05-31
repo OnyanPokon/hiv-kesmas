@@ -27,14 +27,25 @@ function Visit() {
     return <div>Loading...</div>;
   }
 
-  const handlePackage = (doctor) => {
-    window.location.href = `https://wa.me/6281242219002?text=Halo%2C%0A%0ASaya%20ingin%20memesan%20layanan%20${doctor.package_name}%20dengan%20detail%20sebagai%20berikut%3A%0A%0AID%20Paket%3A%20${doctor.id}%0ANama%20Paket%3A%20${doctor.package_name}%0ANama%20Konselor%3A%20${doctor.name}%0AGelar%20Pendidikan%3A%20${doctor.study}%0ASpesialisasi%3A%20${doctor.specialist}%0AHarga%3A%20${doctor.cost}%20(diskon%20dari%20${doctor.discount}).`;
+  const handlePackage = (doctor, packageData) => {
+    const message = `*_Halo HIVCare Admin!_*
+Saya ingin memesan layanan Home Visit VCT dengan detail berikut :
+- ID Paket : ${packageData.id}
+- Nama Paket : ${doctor.package_name}
+- Konselor : ${doctor.name}
+- Spesialisasi : ${doctor.specialist}
+- Harga : ${packageData.cost} (diskon dari ${packageData.discount})`;
+
+    window.location.href = `https://wa.me/6281242219002?text=${encodeURIComponent(
+      message,
+    )}`;
   };
+
   return (
     <>
       <section className="bg-slate-100">
         <div className="grid max-w-screen-xl items-center min-h-screen px-8 py-24 pt-32 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-cent er lg:col-span-7">
+          <div className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl text-color-info-500">
               Home Visit VCT
             </h1>
@@ -58,11 +69,13 @@ function Visit() {
       <section className="bg-white">
         <div className="max-w-screen-xl mx-auto flex flex-col lg:flex-row  gap-y-12 gap-x-12 py-24 px-8">
           <div className="w-full">
-            <h2 className="mb-4 text-2xl  md:text-4xl tracking-tight font-extrabold text-color-info-500">Home Visit VCT</h2>
+            <h2 className="mb-4 text-2xl  md:text-4xl tracking-tight font-extrabold text-color-info-500">
+              Home Visit VCT
+            </h2>
             <p className="max-w-lg text-sm md:text-base font-semibold">
-              Nikmati kenyamanan layanan Home Visit VCT (Voluntary Counseling and Testing)
-              yang inovatif, dimana Anda dapat memesan perawat profesional untuk
-              melakukan kunjungan langsung ke rumah Anda
+              Nikmati kenyamanan layanan Home Visit VCT (Voluntary Counseling
+              and Testing) yang inovatif, dimana Anda dapat memesan perawat
+              profesional untuk melakukan kunjungan langsung ke rumah Anda
             </p>
           </div>
           <div className="w-full">
@@ -72,8 +85,8 @@ function Visit() {
                 <Timeline.Content>
                   <Timeline.Title>Pesan Paket Home Visit VCT</Timeline.Title>
                   <Timeline.Body>
-                    Pilih perawat sesukamu, cek ketersediaan
-                    perawat dan lakukan pemesanan melalui whatsapp admin
+                    Pilih perawat sesukamu, cek ketersediaan perawat dan lakukan
+                    pemesanan melalui whatsapp admin
                   </Timeline.Body>
                 </Timeline.Content>
               </Timeline.Item>
@@ -82,8 +95,8 @@ function Visit() {
                 <Timeline.Content>
                   <Timeline.Title>Penjadwalan Home Visit</Timeline.Title>
                   <Timeline.Body>
-                    Pesanan anda akan di proses oleh admin 1x24 jam,
-                    dan admin akan mengatur penjadwalan untuk Home Visit VCT
+                    Pesanan anda akan di proses oleh admin 1x24 jam, dan admin
+                    akan mengatur penjadwalan untuk Home Visit VCT
                   </Timeline.Body>
                 </Timeline.Content>
               </Timeline.Item>
@@ -92,8 +105,8 @@ function Visit() {
                 <Timeline.Content>
                   <Timeline.Title>Home Visit</Timeline.Title>
                   <Timeline.Body>
-                    Setelah penjadwalan berhasil di setujui,
-                    layanan Home Visit VCT siap di lakukan sesuai dengan jadwal yang disetujui
+                    Setelah penjadwalan berhasil di setujui, layanan Home Visit
+                    VCT siap di lakukan sesuai dengan jadwal yang disetujui
                   </Timeline.Body>
                 </Timeline.Content>
               </Timeline.Item>
@@ -104,19 +117,28 @@ function Visit() {
       <section className="bg-slate-100" ref={targetRef}>
         <div className="max-w-screen-xl mx-auto px-8 py-24 grid grid-cols-12">
           <div className="w-full col-span-12 lg:col-span-6 mb-24 flex flex-col items-center justify-center lg:items-start lg:justify-start">
-            <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-extrabold text-color-info-500">Pilih Paket</h2>
+            <h2 className="mb-4 text-2xl md:text-4xl tracking-tight font-extrabold text-color-info-500">
+              Pilih Paket
+            </h2>
             <p className="max-w-lg text-sm md:text-base font-semibold text-center lg:text-left px-4 lg:px-0">
-              Kami menyediakan berbagai pilihan paket yang dirancang
-              untuk memenuhi berbagai kebutuhan dan preferensi Anda.
+              Kami menyediakan berbagai pilihan paket yang dirancang untuk
+              memenuhi berbagai kebutuhan dan preferensi Anda.
             </p>
           </div>
           <div className="col-span-12 lg:col-span-6 w-full flex flex-col lg:flex-row md:px-24 lg:px-0 gap-x-6 gap-y-24">
             {data.home_visit.doctors.map((doctor) => (
-              <div key={doctor.id} className="group flex flex-col justify-between p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
+              <div
+                key={doctor.id}
+                className="group flex flex-col justify-between p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all"
+              >
                 <div className="flex flex-col gap-y-4">
                   <div className="relative w-full flex items-center justify-center mb-12">
                     <div className="absolute bg-white backdrop-blur-xl p-2 shadow-md rounded-full -translate-y-8 ">
-                      <img src={`${doctor.img_url}`} alt="" className="rounded-full w-28 h-28" />
+                      <img
+                        src={`${doctor.img_url}`}
+                        alt=""
+                        className="rounded-full w-28 h-28"
+                      />
                     </div>
                   </div>
                   <div className="flex flex-col gap-y-px text-sm">
@@ -129,34 +151,43 @@ function Visit() {
                   </div>
                   <div className="flex flex-col gap-y-2 text-sm">
                     Pekerjaan :
-                    <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">{doctor.specialist}</span>
+                    <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">
+                      {doctor.specialist}
+                    </span>
                   </div>
-
                 </div>
                 <div>
                   {doctor.packages.map((paket) => (
-                    <>
+                    <div key={paket.id}>
                       <div className="flex flex-col gap-y-2 mt-6">
-                        <span className="text-3xl  font-extrabold">{paket.cost}</span>
+                        <span className="text-3xl  font-extrabold">
+                          {paket.cost}
+                        </span>
                         <span className="text-sm font-semibold">
                           <s>{paket.discount}</s>
-                          {' '}
                         </span>
                         <div className="flex flex-col gap-y-2 mt-4">
                           {paket.benefits.map((benefit) => (
-                            <span className="inline-flex items-center gap-x-2">
+                            <span
+                              key={benefit.id}
+                              className="inline-flex items-center gap-x-2"
+                            >
                               <HiCheck />
                               {benefit.benefit}
                             </span>
                           ))}
                         </div>
                       </div>
-                      <Button className="w-full border border-slate-200 shadow-sm mt-6" color="white_info" onClick={() => handlePackage(paket)}>
+                      <Button
+                        className="w-full border border-slate-200 shadow-sm mt-6"
+                        color="white_info"
+                        onClick={() => handlePackage(doctor, paket)}
+                      >
                         Chat
                         {' '}
                         {paket.cost}
                       </Button>
-                    </>
+                    </div>
                   ))}
                 </div>
               </div>
