@@ -27,7 +27,7 @@ function Beranda() {
             <h1 className="max-w-2xl mb-6 text-3xl leading-8 font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl">
               Ayo Cegah Penyebaran HIV Bersama
               {' '}
-              <span className="text-color-primary-500">HIVisitScreen</span>
+              <span className="text-color-info-500">HIVisitScreen</span>
             </h1>
             <div className="inline-flex">
               <Button size="lg" color="primary" pill onClick={scrollToTarget}>
@@ -36,7 +36,7 @@ function Beranda() {
               </Button>
             </div>
             <div className="grid grid-flow-row md:grid-flow-col max-w-xl gap-4 mt-8">
-              <div data-aos="fade-up" className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500 ">
+              <div data-aos="fade-up" className="p-6 bg-color-primary-500 text-white transition-colors  w-full md:max-w-sm rounded-xl border-2 flex flex-col gap-y-2 ">
                 <div className="inline-flex gap-x-2 items-center">
                   <div className="rounded-full ">
                     <img src="/illustration/hero-icon-1.png" alt="" className="w-12" />
@@ -49,10 +49,10 @@ function Beranda() {
                   tubuh melawan infeksi dan penyakit.
                 </div>
               </div>
-              <div data-aos="fade-up" className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm  rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500">
+              <div data-aos="fade-up" className="p-6 bg-color-primary-500 text-white transition-colors  w-full md:max-w-sm  rounded-xl border-2 flex flex-col gap-y-2 ">
                 <div className="inline-flex gap-x-2 items-center">
                   <div className="rounded-full ">
-                    <img src="/illustration/hero-icon-2.png" alt="" className="w-12" />
+                    <img src="/illustration/virus.png" alt="" className="w-12" />
                   </div>
                   <p className="font-bold text-lg">Apa itu AIDS</p>
                 </div>
