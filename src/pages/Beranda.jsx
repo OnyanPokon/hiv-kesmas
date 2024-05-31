@@ -99,52 +99,77 @@ function Beranda() {
             <h2 className="mb-2 text-2xl lg:text-4xl tracking-tight font-extrabold text-color-info-500">Apa yang Kami Tawarkan</h2>
             <p className="text-gray-500 text-sm lg:text-lg dark:text-gray-400">Fitur yang mungkin dapat membantu kamu mencegah penyebaran HIV </p>
           </div>
-          <div className="space-y-20 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-            <div data-aos="fade-up">
+          <div className="space-y-20 justify-between items-start md:grid md:grid-cols-2 lg:grid-cols-5 md:gap-12 md:space-y-0">
+          {/* <div className="space-y-20 justify-between md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"> */}
+          {/* <div className="space-y-20 justify-between flex md:gap-12 md:space-y-0"> */}
+            <div data-aos="fade-up" className='flex justify-center flex-col'>
+              <div className="flex justify-center">
               <img
                 src="/illustration/Frame 17.png"
                 alt="mockup"
-                className="w-20 h-20 mb-2"
+                className="w-20 h-20 mb-2 justify-center flex"
               />
-              <h3 className="mb-2 text-xl font-bold text-color-info-500">Home Visit VCT</h3>
-              <p className="text-gray-500 dark:text-gray-400">Bertemu dengan perawat ahli dibidangnya dan nikmati pelayanan atas keluhanmu</p>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Home Visit VCT</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">Bertemu dengan perawat ahli dibidangnya dan nikmati pelayanan atas keluhanmu</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/visit')}>
                 Selengkapnya
               </Button>
             </div>
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" className='flex justify-center flex-col'>
+            <div className="flex justify-center">
               <img
                 src="/illustration/Frame 18.png"
                 alt="mockup"
                 className="w-20 h-20 mb-2"
               />
-              <h3 className="mb-2 text-xl font-bold text-color-info-500">Screening HIV</h3>
-              <p className="text-gray-500 dark:text-gray-400">Periksa dan cek kondisi tubuh agar terbebas dari paparan infeksi HIV</p>
+            </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Screening HIV</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">Periksa dan cek kondisi tubuh agar terbebas dari paparan infeksi HIV</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/screening')}>
                 Selengkapnya
               </Button>
             </div>
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" className='flex justify-center flex-col'>
+            <div className="flex justify-center">
               <img
                 src="/illustration/Frame 19.png"
                 alt="mockup"
                 className="w-20 h-20 mb-2"
               />
-              <h3 className="mb-2 text-xl font-bold text-color-info-500">Pendampingan Minum Obat</h3>
-              <p className="text-gray-500 dark:text-gray-400">Para ahli siap mendampingi pengobatanmu sampai kondisimu membaik</p>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Pendampingan Minum Obat</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">Para ahli siap mendampingi pengobatanmu </p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/pendampingan')}>
                 Selengkapnya
               </Button>
             </div>
-            <div data-aos="fade-up">
+            <div data-aos="fade-up" className='flex justify-center flex-col'>
+            <div className="flex justify-center">
               <img
                 src="/illustration/Frame 20.png"
                 alt="mockup"
                 className="w-20 h-20 mb-2"
               />
-              <h3 className="mb-2 text-xl font-bold text-color-info-500">Edukasi HIV</h3>
-              <p className="text-gray-500 dark:text-gray-400">Tambah pengetahuan tentang HIV agar semakin waspada dengan virus HIV</p>
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Edukasi HIV</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">Tambah pengetahuan tentang HIV agar semakin waspada dengan virus HIV</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/edukasi')}>
+                Selengkapnya
+              </Button>
+            </div>
+            <div data-aos="fade-up" className='flex justify-center flex-col'>
+              <div className="flex justify-center">
+
+              <img
+                src="/illustration/Frame 20.png"
+                alt="mockup"
+                className="w-20 h-20 mb-2"
+                />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Teman Sebaya</h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">Bebaskan ekspresimu bersama teman sebaya denganmu</p>
+              <Button color="info" pill className="mt-4" onClick={() => navigate('/teman')}>
                 Selengkapnya
               </Button>
             </div>
