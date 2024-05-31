@@ -57,7 +57,7 @@ Saya ingin memesan layanan Edukasi HIV dengan detail berikut :
           </div>
           <div className="mt-16 lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="/illustration/edukasi-hero.png"
+              src="/illustration/Frame 13.png"
               alt="mockup"
               className="w-7/8 h-7/8"
             />

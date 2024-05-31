@@ -75,13 +75,7 @@ function Beranda() {
         <div className="max-w-screen-xl mx-auto px-8 py-24 flex items-center gap-x-6">
           <div className="w-full hidden lg:block">
             <div className="relative">
-              <img src="/illustration/hero-3.png" alt="" className="w-4/5" />
-              <div className="absolute right-16 bottom-4 bg-white p-8 rounded-full shadow-lg">
-                <img src="/illustration/hero-icon-1.png" alt="" className="w-24" />
-              </div>
-              <div className="p-6 text-lg bg-white text-color-info-500 font-bold rounded-xl absolute top-12 shadow-xl">
-                <p>Stop🤚 HIV!!!</p>
-              </div>
+              <img src="/illustration/Frame 12.png" alt="" className="w-4/5" />
             </div>
           </div>
           <div data-aos="fade-left" className="flex flex-col gap-y-2 w-full">
@@ -105,16 +99,13 @@ function Beranda() {
             <h2 className="mb-2 text-2xl lg:text-4xl tracking-tight font-extrabold text-color-info-500">Apa yang Kami Tawarkan</h2>
             <p className="text-gray-500 text-sm lg:text-lg dark:text-gray-400">Fitur yang mungkin dapat membantu kamu mencegah penyebaran HIV </p>
           </div>
-          <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+          <div className="space-y-20 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
             <div data-aos="fade-up">
-              <div className="flex justify-center items-center mb-4 w-25 h-25 rounded-full bg-info-100 lg:h-25 lg:w-25 bg-color-info-100 text-color-info-500">
-                {/* <HiLocationMarker /> */}
-                <img
-                  src="/illustration/visit-hero.png"
-                  alt="mockup"
-                  className="w-7/8 h-7/8"
-                />
-              </div>
+              <img
+                src="/illustration/Frame 17.png"
+                alt="mockup"
+                className="w-20 h-20 mb-2"
+              />
               <h3 className="mb-2 text-xl font-bold text-color-info-500">Home Visit VCT</h3>
               <p className="text-gray-500 dark:text-gray-400">Bertemu dengan perawat ahli dibidangnya dan nikmati pelayanan atas keluhanmu</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/visit')}>
@@ -122,9 +113,11 @@ function Beranda() {
               </Button>
             </div>
             <div data-aos="fade-up">
-              <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-info-100 lg:h-12 lg:w-12 bg-color-info-100 text-color-info-500">
-                <HiBriefcase />
-              </div>
+              <img
+                src="/illustration/Frame 18.png"
+                alt="mockup"
+                className="w-20 h-20 mb-2"
+              />
               <h3 className="mb-2 text-xl font-bold text-color-info-500">Screening HIV</h3>
               <p className="text-gray-500 dark:text-gray-400">Periksa dan cek kondisi tubuh agar terbebas dari paparan infeksi HIV</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/screening')}>
@@ -132,9 +125,11 @@ function Beranda() {
               </Button>
             </div>
             <div data-aos="fade-up">
-              <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-info-100 lg:h-12 lg:w-12 bg-color-info-100 text-color-info-500">
-                <HiBeaker />
-              </div>
+              <img
+                src="/illustration/Frame 19.png"
+                alt="mockup"
+                className="w-20 h-20 mb-2"
+              />
               <h3 className="mb-2 text-xl font-bold text-color-info-500">Pendampingan Minum Obat</h3>
               <p className="text-gray-500 dark:text-gray-400">Para ahli siap mendampingi pengobatanmu sampai kondisimu membaik</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/pendampingan')}>
@@ -142,9 +137,11 @@ function Beranda() {
               </Button>
             </div>
             <div data-aos="fade-up">
-              <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-info-100 lg:h-12 lg:w-12 bg-color-info-100 text-color-info-500">
-                <HiBookOpen />
-              </div>
+              <img
+                src="/illustration/Frame 20.png"
+                alt="mockup"
+                className="w-20 h-20 mb-2"
+              />
               <h3 className="mb-2 text-xl font-bold text-color-info-500">Edukasi HIV</h3>
               <p className="text-gray-500 dark:text-gray-400">Tambah pengetahuan tentang HIV agar semakin waspada dengan virus HIV</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/edukasi')}>

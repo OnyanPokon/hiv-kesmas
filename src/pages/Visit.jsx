@@ -59,7 +59,7 @@ Saya ingin memesan layanan Home Visit VCT dengan detail berikut :
           </div>
           <div className="mt-16 lg:mt-0 lg:col-span-5 lg:flex">
             <img
-              src="/illustration/visit-hero.png"
+              src="/illustration/Frame 16.png"
               alt="mockup"
               className="w-7/8 h-7/8"
             />
