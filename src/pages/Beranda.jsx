@@ -41,7 +41,7 @@ function Beranda() {
                   <div className="rounded-full ">
                     <img src="/illustration/hero-icon-1.png" alt="" className="w-12" />
                   </div>
-                  <p className="font-bold text-lg">Kenali HIV/AIDS lebih dekat</p>
+                  <p className="font-bold text-lg">Apa itu HIV</p>
                 </div>
                 <div className="text-xs font-semibold">
                   HIV (Human Immunodeficiency Virus) adalah virus yang menyerang
@@ -54,7 +54,7 @@ function Beranda() {
                   <div className="rounded-full ">
                     <img src="/illustration/hero-icon-2.png" alt="" className="w-12" />
                   </div>
-                  <p className="font-bold text-lg">Ayo cegah HIV/AIDS Bersama</p>
+                  <p className="font-bold text-lg">Apa itu AIDS</p>
                 </div>
                 <div className="text-xs font-semibold">
                   AIDS (Acquired Immune Deficiency Syndrome)
@@ -85,9 +85,9 @@ function Beranda() {
             </div>
           </div>
           <div data-aos="fade-left" className="flex flex-col gap-y-2 w-full">
-            <p className="text-white font-extrabold text-2xl lg:text-3xl">Gejala HIV/AIDS</p>
+            <p className="text-white font-extrabold text-2xl lg:text-3xl">Mengapa Harus HIVisitScreen?</p>
             <p className="text-white text-xs lg:text-base font-semibold">
-              Mengapa Harus HIVisitScreen?? Karena HIVisitScreen merupakan
+              Karena HIVisitScreen merupakan
               media pemberi layanan yang akurat dan lengkap mengenai HIV/AIDS
               dengan model platform modern yang inovatif, mudah digunakan,
               dapat diakses siapapun dan kapanpun serta terpercaya yang
@@ -131,7 +131,7 @@ function Beranda() {
                 <HiBeaker />
               </div>
               <h3 className="mb-2 text-xl font-bold text-color-info-500">Pendampingan Minum Obat</h3>
-              <p className="text-gray-500 dark:text-gray-400">Para ahli setia menememani kamu dan memberikan rekomendasi obat yang cocok dengan kondisimu</p>
+              <p className="text-gray-500 dark:text-gray-400">Para ahli siap mendampingi pengobatanmu sampai kondisimu membaik</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/pendampingan')}>
                 Selengkapnya
               </Button>

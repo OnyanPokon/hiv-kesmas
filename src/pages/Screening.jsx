@@ -126,13 +126,10 @@ Saya ingin memesan layanan Screening HIV dengan detail berikut :
                 </div>
                 <div className="flex flex-col gap-y-px text-sm">
                   Nama Pemeriksa :
-                  <span className="text-lg font-semibold">{accessor.name}</span>
+                  <span className="text-xl font-semibold">{accessor.name}</span>
                 </div>
-                <div className="flex flex-col gap-y-px text-sm">
-                  Pendidikan :
-                  <span className="text-lg font-semibold">{accessor.study}</span>
-                </div>
-                <div className="flex flex-col gap-y-2 mt-6">
+               
+                <div className="flex flex-col gap-y-2 mt-4">
                   <span className="text-3xl  font-extrabold">{accessor.cost}</span>
                   <span className="text-sm font-semibold">
                     <s>{accessor.discount}</s>

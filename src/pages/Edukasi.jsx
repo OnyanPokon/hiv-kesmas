@@ -131,10 +131,7 @@ Saya ingin memesan layanan Edukasi HIV dengan detail berikut :
                     Nama Pemeriksa :
                     <span className=" font-semibold">{educator.name}</span>
                   </div>
-                  <div className="flex flex-col gap-y-px text-sm">
-                    Pendidikan :
-                    <span className=" font-semibold">{educator.study}</span>
-                  </div>
+                 
                   <div className="flex flex-col gap-y-2 text-sm">
                     Pekerjaan :
                     <span className="text-sm font-semibold py-2 px-4 bg-color-info-100 text-color-info-500 rounded-md w-full text-center">{educator.specialist}</span>
