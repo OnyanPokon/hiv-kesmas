@@ -9,14 +9,15 @@ import {
 import { HiMap } from 'react-icons/hi';
 import { HiCheck } from 'react-icons/hi2';
 import { MdEmail } from 'react-icons/md';
+import HistatsCounter from '../Histats/HistatsCounter';
 
 function Footer() {
   return (
     <footer className="bg-slate-200">
-      <div className="grid grid-cols-12 gap-8 max-w-screen-xl mx-auto  p-8 lg:p-24">
-        <div className="col-span-12 lg:col-span-4 ">
+      <div className="grid grid-cols-12 gap-8 max-w-screen-xl mx-auto  p-8 lg:p-24 items-start">
+        <div className="col-span-12 lg:col-span-4">
           <div className="flex flex-col gap-y-2">
-            <p className="mb-4">Merawat dengan sepenuh hati :</p>
+            <p className="mb-4 font-bold">Merawat dengan sepenuh hati :</p>
             <Avatar.Group>
               <Avatar img="/profile/white/Frame 4.jpg" rounded stacked />
               <Avatar img="/profile/white/Frame 5.jpg" rounded stacked />
@@ -51,8 +52,8 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-4 ">
-          <div className="flex flex-col gap-y-2 mt-4">
+        <div className="col-span-12 lg:col-span-4">
+          <div className="flex flex-col gap-y-2">
             <p className="font-bold">Kontak Kami</p>
             <div className="inline-flex items-center gap-x-2 font-semibold">
               <span className="p-2 bg-green-500 rounded-full">
@@ -88,6 +89,10 @@ function Footer() {
             </div>
           </div>
         </div>
+        <div className="col-span-12 lg:col-span-4">
+          <HistatsCounter />
+        </div>
+        <hr className="col-span-12 mt-6 mb-6 border-slate-300" />
         <div className="col-span-12 lg:col-span-4 flex items-center gap-x-2">
           <img src="/logo/kemendikbud.png" alt="" className="w-10 lg:w-16 " />
           <img src="/logo/ung.png" alt="" className="w-10 lg:w-16" />
