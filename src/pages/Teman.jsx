@@ -50,7 +50,7 @@ Saya ingin memesan layanan Teman Sebaya dengan detail berikut :
         </div>
         <div className="mt-16 lg:mt-0 lg:col-span-5 lg:flex lg:justify-center">
           {data.friends.friend.map((friend) => (
-            <div key={friend.id} className="group max-w-sm flex flex-col justify-between p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
+            <div data-aos="fade-left" key={friend.id} className="group max-w-sm flex flex-col justify-between p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
               <div className="flex flex-col gap-y-4">
                 <div className="flex flex-col gap-y-px text-sm">
                   <span className=" font-semibold">{friend.package_name}</span>

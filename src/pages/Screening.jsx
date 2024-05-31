@@ -42,7 +42,7 @@ Saya ingin memesan layanan Screening HIV dengan detail berikut :
     <>
       <section className="bg-slate-100">
         <div className="grid max-w-screen-xl items-center min-h-screen px-8 py-24 pt-32 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-cent er lg:col-span-7">
+          <div data-aos="fade-up" className="mr-auto place-self-cent er lg:col-span-7">
             <h1 className="max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl text-color-info-500">
               Screening HIV
             </h1>
@@ -116,7 +116,7 @@ Saya ingin memesan layanan Screening HIV dengan detail berikut :
               untuk memenuhi berbagai kebutuhan dan preferensi Anda.
             </p>
           </div>
-          <div className="col-span-12  w-full flex flex-col lg:flex-row md:px-24 gap-x-6 gap-y-24">
+          <div data-aos="fade-up" className="col-span-12  w-full flex flex-col lg:flex-row md:px-24 gap-x-6 gap-y-24">
             {data.screening.accessor.map((accessor) => (
               <div key={accessor.id} className="group flex flex-col gap-y-4 p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all">
                 <div className="relative w-full flex items-center justify-center mb-12">

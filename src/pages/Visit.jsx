@@ -45,7 +45,7 @@ Saya ingin memesan layanan Home Visit VCT dengan detail berikut :
     <>
       <section className="bg-slate-100">
         <div className="grid max-w-screen-xl items-center min-h-screen px-8 py-24 pt-32 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
+          <div data-aos="fade-up" className="mr-auto place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl text-color-info-500">
               Home Visit VCT
             </h1>
@@ -128,6 +128,7 @@ Saya ingin memesan layanan Home Visit VCT dengan detail berikut :
           <div className="col-span-12 lg:col-span-6 w-full flex flex-col lg:flex-row md:px-24 lg:px-0 gap-x-6 gap-y-24">
             {data.home_visit.doctors.map((doctor) => (
               <div
+                data-aos="fade-left"
                 key={doctor.id}
                 className="group flex flex-col justify-between p-8 rounded-xl border border-slate-200 shadow-md bg-white w-full hover:text-white hover:bg-color-info-500 hover:scale-105 transition-all"
               >

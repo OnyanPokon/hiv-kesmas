@@ -36,7 +36,7 @@ function Beranda() {
               </Button>
             </div>
             <div className="grid grid-flow-row md:grid-flow-col max-w-xl gap-4 mt-8">
-              <div className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500 ">
+              <div data-aos="fade-up" className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500 ">
                 <div className="inline-flex gap-x-2">
                   <div className="rounded-full ">
                     <img src="/illustration/hero-icon-1.png" alt="" className="w-12" />
@@ -49,7 +49,7 @@ function Beranda() {
                   tubuh melawan infeksi dan penyakit.
                 </div>
               </div>
-              <div className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm  rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500">
+              <div data-aos="fade-up" className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm  rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500">
                 <div className="inline-flex gap-x-2">
                   <div className="rounded-full ">
                     <img src="/illustration/hero-icon-2.png" alt="" className="w-12" />
@@ -84,7 +84,7 @@ function Beranda() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-y-2 w-full">
+          <div data-aos="fade-left" className="flex flex-col gap-y-2 w-full">
             <p className="text-white font-extrabold text-2xl lg:text-3xl">Gejala HIV/AIDS</p>
             <p className="text-white text-xs lg:text-base font-semibold">
               Mengapa Harus HIVisitScreen?? Karena HIVisitScreen merupakan
@@ -100,13 +100,13 @@ function Beranda() {
         </div>
       </section>
       <section className="bg-white " ref={targetRef}>
-        <div className="py-8 px-8 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
+        <div className="py-24 px-8 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
           <div className="max-w-screen-md mb-8 lg:mb-16">
             <h2 className="mb-2 text-2xl lg:text-4xl tracking-tight font-extrabold text-color-info-500">Apa yang Kami Tawarkan</h2>
             <p className="text-gray-500 text-sm lg:text-lg dark:text-gray-400">Fitur yang mungkin dapat membantu kamu mencegah penyebaran HIV </p>
           </div>
           <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-            <div>
+            <div data-aos="fade-up">
               <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-info-100 lg:h-12 lg:w-12 bg-color-info-100 text-color-info-500">
                 <HiLocationMarker />
               </div>
@@ -116,7 +116,7 @@ function Beranda() {
                 Selengkapnya
               </Button>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-info-100 lg:h-12 lg:w-12 bg-color-info-100 text-color-info-500">
                 <HiBriefcase />
               </div>
@@ -126,7 +126,7 @@ function Beranda() {
                 Selengkapnya
               </Button>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-info-100 lg:h-12 lg:w-12 bg-color-info-100 text-color-info-500">
                 <HiBeaker />
               </div>
@@ -136,7 +136,7 @@ function Beranda() {
                 Selengkapnya
               </Button>
             </div>
-            <div>
+            <div data-aos="fade-up">
               <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-info-100 lg:h-12 lg:w-12 bg-color-info-100 text-color-info-500">
                 <HiBookOpen />
               </div>
