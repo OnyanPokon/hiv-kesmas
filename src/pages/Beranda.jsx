@@ -1,22 +1,49 @@
-import React, { useRef } from 'react';
-import { Button } from 'flowbite-react';
+/* eslint-disable import/extensions */
+/* eslint-disable camelcase */
+/* eslint-disable quotes */
+/* eslint-disable no-undef */
+import React, { useRef } from "react";
+import { Button } from "flowbite-react";
 import {
   HiBeaker,
   HiBookOpen,
   HiBriefcase,
-  HiCheckCircle, HiOutlineArrowRight,
-} from 'react-icons/hi2';
-import { HiLocationMarker } from 'react-icons/hi';
-import { useNavigate } from 'react-router-dom';
+  HiCheckCircle,
+  HiOutlineArrowRight,
+} from "react-icons/hi2";
+import { HiLocationMarker } from "react-icons/hi";
+import { useNavigate } from "react-router-dom";
+import Lottie from "react-lottie";
+import lottie_1 from "./lottie-1.json";
+import lottie_2 from "./lottie-2.json";
 
 function Beranda() {
+  const defaultOptions_satu = {
+    loop: true,
+    autoplay: true,
+    // eslint-disable-next-line object-shorthand
+    animationData: lottie_1,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const defaultOptions_dua = {
+    loop: true,
+    autoplay: true,
+    // eslint-disable-next-line object-shorthand
+    animationData: lottie_2,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   const navigate = useNavigate();
   const targetRef = useRef(null);
 
   // Fungsi untuk menggulir ke elemen yang dituju
   const scrollToTarget = () => {
     if (targetRef.current) {
-      targetRef.current.scrollIntoView({ behavior: 'smooth' });
+      targetRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
   return (
@@ -26,8 +53,8 @@ function Beranda() {
           <div className="mr-auto place-self-cent er lg:col-span-7">
             <h1 className="max-w-2xl mb-6 text-3xl leading-8 font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl">
               Ayo Cegah Penyebaran HIV Bersama
-              {' '}
-              <span className="text-color-info-500">HIVisitScreen</span>
+              {" "}
+              <span className="text-color-primary-500">HIVisitScreen</span>
             </h1>
             <div className="inline-flex">
               <Button size="lg" color="primary" pill onClick={scrollToTarget}>
@@ -36,38 +63,55 @@ function Beranda() {
               </Button>
             </div>
             <div className="grid grid-flow-row md:grid-flow-col max-w-xl gap-4 mt-8">
-              <div data-aos="fade-up" className="p-6 bg-color-primary-500 text-white transition-colors  w-full md:max-w-sm rounded-xl border-2 flex flex-col gap-y-2 ">
+              <div
+                data-aos="fade-up"
+                className="p-6 border-2 border-color-info-500 text-color-info-500 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm rounded-xl flex flex-col gap-y-2 "
+              >
                 <div className="inline-flex gap-x-2 items-center">
                   <div className="rounded-full ">
-                    <img src="/illustration/hero-icon-1.png" alt="" className="w-12" />
+                    <Lottie
+                      options={defaultOptions_dua}
+                      height={60}
+                      width={60}
+                    />
                   </div>
                   <p className="font-bold text-lg">Apa itu HIV ?</p>
                 </div>
                 <div className="text-xs font-semibold text-justify">
                   HIV (Human Immunodeficiency Virus) adalah virus yang menyerang
-                  sistem kekebalan tubuh yang dapat melemahkan kemampuan
-                  tubuh melawan infeksi dan penyakit.
+                  sistem kekebalan tubuh yang dapat melemahkan kemampuan tubuh
+                  melawan infeksi dan penyakit.
                 </div>
               </div>
-              <div data-aos="fade-up" className="p-6 bg-color-primary-500 text-white transition-colors  w-full md:max-w-sm  rounded-xl border-2 flex flex-col gap-y-2 ">
+              <div
+                data-aos="fade-up"
+                className="p-6 border-2 border-color-info-500 text-color-info-500 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm  rounded-xl  flex flex-col gap-y-2 "
+              >
                 <div className="inline-flex gap-x-2 items-center">
                   <div className="rounded-full ">
-                    <img src="/illustration/virus.png" alt="" className="w-12" />
+                    <Lottie
+                      options={defaultOptions_satu}
+                      height={60}
+                      width={60}
+                    />
                   </div>
                   <p className="font-bold text-lg">Apa itu AIDS</p>
                 </div>
                 <div className="text-xs font-semibold text-justify">
-                  AIDS (Acquired Immune Deficiency Syndrome)
-                  adalah kondisi di mana HIV sudah pada tahap
-                  infeksi akhir. Ketika seseorang sudah mengalami AIDS,
-                  tubuh tidak lagi memiliki kemampuan untuk melawan infeksi yang ditimbulkan.
+                  AIDS (Acquired Immune Deficiency Syndrome) adalah kondisi di
+                  mana HIV sudah pada tahap infeksi akhir. Ketika seseorang
+                  sudah mengalami AIDS, tubuh tidak lagi memiliki kemampuan
+                  untuk melawan infeksi yang ditimbulkan.
                 </div>
               </div>
-
             </div>
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="/illustration/hero-2.png" alt="mockup" className="w-7/8 h-7/8" />
+            <img
+              src="/illustration/hero-2.png"
+              alt="mockup"
+              className="w-7/8 h-7/8"
+            />
           </div>
         </div>
       </section>
@@ -79,15 +123,17 @@ function Beranda() {
             </div>
           </div>
           <div data-aos="fade-left" className="flex flex-col gap-y-2 w-full">
-            <p className="text-white font-extrabold text-3xl lg:text-4xl">Mengapa Harus HIVisitScreen?</p>
+            <p className="text-white font-extrabold text-3xl lg:text-4xl">
+              Mengapa Harus HIVisitScreen?
+            </p>
             <p className="text-white text-sm lg:text-base font-semibold text-justify">
-              Karena HIVisitScreen merupakan
-              media pemberi layanan yang akurat dan lengkap mengenai HIV/AIDS
-              dengan model platform modern yang inovatif, mudah digunakan,
-              dapat diakses siapapun dan kapanpun serta terpercaya yang
-              berkontribusi dalam mengakselerasi pertumbuhan ekonomi digital
-              serta memastikan kehidupan yang sehat dan sejahtera bagi semua
-              kalangan dengan tujuan bersama yaitu untuk Indonesia menuju three zero HIV/AIDS 2030.
+              Karena HIVisitScreen merupakan media pemberi layanan yang akurat
+              dan lengkap mengenai HIV/AIDS dengan model platform modern yang
+              inovatif, mudah digunakan, dapat diakses siapapun dan kapanpun
+              serta terpercaya yang berkontribusi dalam mengakselerasi
+              pertumbuhan ekonomi digital serta memastikan kehidupan yang sehat
+              dan sejahtera bagi semua kalangan dengan tujuan bersama yaitu
+              untuk Indonesia menuju three zero HIV/AIDS 2030.
             </p>
           </div>
           <div />
@@ -96,89 +142,140 @@ function Beranda() {
       <section className="bg-white " ref={targetRef}>
         <div className="py-24 px-8 mx-auto max-w-screen-xl sm:py-24 lg:px-6">
           <div className="max-w-screen-md mb-8 lg:mb-16">
-            <h2 className="mb-2 text-2xl lg:text-4xl tracking-tight font-extrabold text-color-info-500">Apa yang Kami Tawarkan</h2>
-            <p className="text-gray-500 text-sm lg:text-lg dark:text-gray-400">Fitur yang mungkin dapat membantu kamu mencegah penyebaran HIV </p>
+            <h2 className="mb-2 text-2xl lg:text-4xl tracking-tight font-extrabold text-color-info-500">
+              Apa yang Kami Tawarkan
+            </h2>
+            <p className="text-gray-500 text-sm lg:text-lg dark:text-gray-400">
+              Fitur yang mungkin dapat membantu kamu mencegah penyebaran HIV
+              {" "}
+            </p>
           </div>
           <div className="space-y-20 justify-between items-start md:grid md:grid-cols-2 lg:grid-cols-5 md:gap-12 md:space-y-0">
-          {/* <div className="space-y-20 justify-between md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"> */}
-          {/* <div className="space-y-20 justify-between flex md:gap-12 md:space-y-0"> */}
-            <div data-aos="fade-up" className='flex justify-center flex-col'>
+            {/* <div className="space-y-20 justify-between md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0"> */}
+            {/* <div className="space-y-20 justify-between flex md:gap-12 md:space-y-0"> */}
+            <div data-aos="fade-up" className="flex justify-center flex-col">
               <div className="flex justify-center">
-              <img
-                src="/illustration/Frame 17.png"
-                alt="mockup"
-                className="w-20 h-20 mb-2 justify-center flex"
-              />
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Home Visit VCT</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-center">Bertemu dengan perawat ahli dibidangnya dan nikmati pelayanan atas keluhanmu</p>
-              <Button color="info" pill className="mt-4" onClick={() => navigate('/visit')}>
-                Selengkapnya
-              </Button>
-            </div>
-            <div data-aos="fade-up" className='flex justify-center flex-col'>
-            <div className="flex justify-center">
-              <img
-                src="/illustration/Frame 18.png"
-                alt="mockup"
-                className="w-20 h-20 mb-2"
-              />
-            </div>
-              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Screening HIV</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-center">Periksa dan cek kondisi tubuh agar terbebas dari paparan infeksi HIV</p>
-              <Button color="info" pill className="mt-4" onClick={() => navigate('/screening')}>
-                Selengkapnya
-              </Button>
-            </div>
-            <div data-aos="fade-up" className='flex justify-center flex-col'>
-            <div className="flex justify-center">
-              <img
-                src="/illustration/Frame 19.png"
-                alt="mockup"
-                className="w-20 h-20 mb-2"
-              />
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Pendampingan Minum Obat</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-center">Para ahli siap mendampingi pengobatanmu </p>
-              <Button color="info" pill className="mt-4" onClick={() => navigate('/pendampingan')}>
-                Selengkapnya
-              </Button>
-            </div>
-            <div data-aos="fade-up" className='flex justify-center flex-col'>
-            <div className="flex justify-center">
-              <img
-                src="/illustration/Frame 20.png"
-                alt="mockup"
-                className="w-20 h-20 mb-2"
-              />
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Edukasi HIV</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-center">Tambah pengetahuan tentang HIV agar semakin waspada dengan virus HIV</p>
-              <Button color="info" pill className="mt-4" onClick={() => navigate('/edukasi')}>
-                Selengkapnya
-              </Button>
-            </div>
-            <div data-aos="fade-up" className='flex justify-center flex-col'>
-              <div className="flex justify-center">
-
-              <img
-                src="/illustration/Frame 20.png"
-                alt="mockup"
-                className="w-20 h-20 mb-2"
+                <img
+                  src="/illustration/Frame 17.png"
+                  alt="mockup"
+                  className="w-20 h-20 mb-2 justify-center flex"
                 />
               </div>
-              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">Teman Sebaya</h3>
-              <p className="text-gray-500 dark:text-gray-400 text-center">Bebaskan ekspresimu bersama teman sebaya denganmu</p>
-              <Button color="info" pill className="mt-4" onClick={() => navigate('/teman')}>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">
+                Home Visit VCT
+              </h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">
+                Bertemu dengan perawat ahli dibidangnya dan nikmati pelayanan
+                atas keluhanmu
+              </p>
+              <Button
+                color="info"
+                pill
+                className="mt-4"
+                onClick={() => navigate("/visit")}
+              >
                 Selengkapnya
               </Button>
             </div>
-
+            <div data-aos="fade-up" className="flex justify-center flex-col">
+              <div className="flex justify-center">
+                <img
+                  src="/illustration/Frame 21.png"
+                  alt="mockup"
+                  className="w-20 h-20 mb-2"
+                />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">
+                Screening HIV
+              </h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">
+                Periksa dan cek kondisi tubuh agar terbebas dari paparan infeksi
+                HIV
+              </p>
+              <Button
+                color="info"
+                pill
+                className="mt-4"
+                onClick={() => navigate("/screening")}
+              >
+                Selengkapnya
+              </Button>
+            </div>
+            <div data-aos="fade-up" className="flex justify-center flex-col">
+              <div className="flex justify-center">
+                <img
+                  src="/illustration/Frame 19.png"
+                  alt="mockup"
+                  className="w-20 h-20 mb-2"
+                />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">
+                Pendampingan Minum Obat
+              </h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">
+                Para ahli siap mendampingi pengobatanmu
+                {" "}
+              </p>
+              <Button
+                color="info"
+                pill
+                className="mt-4"
+                onClick={() => navigate("/pendampingan")}
+              >
+                Selengkapnya
+              </Button>
+            </div>
+            <div data-aos="fade-up" className="flex justify-center flex-col">
+              <div className="flex justify-center">
+                <img
+                  src="/illustration/Frame 20.png"
+                  alt="mockup"
+                  className="w-20 h-20 mb-2"
+                />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">
+                Edukasi HIV
+              </h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">
+                Tambah pengetahuan tentang HIV agar semakin waspada dengan virus
+                HIV
+              </p>
+              <Button
+                color="info"
+                pill
+                className="mt-4"
+                onClick={() => navigate("/edukasi")}
+              >
+                Selengkapnya
+              </Button>
+            </div>
+            <div data-aos="fade-up" className="flex justify-center flex-col">
+              <div className="flex justify-center">
+                <img
+                  src="/illustration/Frame 18.png"
+                  alt="mockup"
+                  className="w-20 h-20 mb-2"
+                />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-color-info-500 text-center">
+                Teman Sebaya
+              </h3>
+              <p className="text-gray-500 dark:text-gray-400 text-center">
+                Bebaskan ekspresimu bersama teman sebaya denganmu
+              </p>
+              <Button
+                color="info"
+                pill
+                className="mt-4"
+                onClick={() => navigate("/teman")}
+              >
+                Selengkapnya
+              </Button>
+            </div>
           </div>
         </div>
       </section>
     </>
-
   );
 }
 
