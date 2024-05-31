@@ -34,21 +34,21 @@ export const navMenus = [
   {
     id: 2,
     path: '/visit',
-    text: 'Visiti',
+    text: 'Home Visit VCT',
   },
   {
     id: 3,
     path: '/screening',
-    text: 'Screening',
+    text: 'Screening HIV',
   },
   {
     id: 4,
     path: '/pendampingan',
-    text: 'Pendampingan',
+    text: 'Pendampingan Minum Obat',
   },
   {
     id: 5,
     path: '/edukasi',
-    text: 'Edukasi',
+    text: 'Edukasi HIV',
   },
 ];

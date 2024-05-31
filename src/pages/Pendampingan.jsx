@@ -48,7 +48,7 @@ Saya ingin memesan layanan Pendampingan Minum Obat dengan detail berikut :
               Pendampingan Minum Obat
             </h1>
             <p className="max-w-xl mb-6 font-bold lg:mb-8 md:text-lg lg:text-2xl ">
-              itu mo tulis Para ahli siap mendampingi pengobatanmu sampai kondisimu membaik
+              Para ahli siap mendampingi pengobatanmu sampai kondisimu membaik
             </p>
             <Button pill color="primary" size="lg" onClick={scrollToTarget}>
               Telusuri Sekarang
@@ -131,11 +131,7 @@ Saya ingin memesan layanan Pendampingan Minum Obat dengan detail berikut :
                     Nama Pendamping :
                     <span className=" font-semibold">{nurse.name}</span>
                   </div>
-                  <div className="flex flex-col gap-y-px text-sm">
-                    Pendidikan :
-                    <span className=" font-semibold">{nurse.study}</span>
-                  </div>
-                  <div className="flex flex-col gap-y-2 mt-6">
+                  <div className="flex flex-col gap-y-2 mt-4">
                     <span className="text-3xl  font-extrabold">{nurse.cost}</span>
                     <span className="text-sm font-semibold">
                       <s>{nurse.discount}</s>

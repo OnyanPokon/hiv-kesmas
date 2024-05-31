@@ -27,7 +27,7 @@ function Beranda() {
             <h1 className="max-w-2xl mb-6 text-3xl leading-8 font-extrabold tracking-tight leading-none md:text-5xl xl:text-5xl">
               Ayo Cegah Penyebaran HIV Bersama
               {' '}
-              <span className="text-color-info-600">HIVisitScreen</span>
+              <span className="text-color-primary-500">HIVisitScreen</span>
             </h1>
             <div className="inline-flex">
               <Button size="lg" color="primary" pill onClick={scrollToTarget}>
@@ -37,26 +37,26 @@ function Beranda() {
             </div>
             <div className="grid grid-flow-row md:grid-flow-col max-w-xl gap-4 mt-8">
               <div data-aos="fade-up" className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500 ">
-                <div className="inline-flex gap-x-2">
+                <div className="inline-flex gap-x-2 items-center">
                   <div className="rounded-full ">
                     <img src="/illustration/hero-icon-1.png" alt="" className="w-12" />
                   </div>
-                  <p className="font-bold text-lg">Kenali HIV/AIDS lebih dekat</p>
+                  <p className="font-bold text-lg">Apa itu HIV ?</p>
                 </div>
-                <div className="text-xs font-semibold">
+                <div className="text-xs font-semibold text-justify">
                   HIV (Human Immunodeficiency Virus) adalah virus yang menyerang
                   sistem kekebalan tubuh yang dapat melemahkan kemampuan
                   tubuh melawan infeksi dan penyakit.
                 </div>
               </div>
               <div data-aos="fade-up" className="p-6 hover:bg-color-info-500 hover:text-white transition-colors  w-full md:max-w-sm  rounded-xl border-2 flex flex-col gap-y-2 border-color-info-500 text-color-info-500">
-                <div className="inline-flex gap-x-2">
+                <div className="inline-flex gap-x-2 items-center">
                   <div className="rounded-full ">
                     <img src="/illustration/hero-icon-2.png" alt="" className="w-12" />
                   </div>
-                  <p className="font-bold text-lg">Ayo cegah HIV/AIDS Bersama</p>
+                  <p className="font-bold text-lg">Apa itu AIDS</p>
                 </div>
-                <div className="text-xs font-semibold">
+                <div className="text-xs font-semibold text-justify">
                   AIDS (Acquired Immune Deficiency Syndrome)
                   adalah kondisi di mana HIV sudah pada tahap
                   infeksi akhir. Ketika seseorang sudah mengalami AIDS,
@@ -85,9 +85,9 @@ function Beranda() {
             </div>
           </div>
           <div data-aos="fade-left" className="flex flex-col gap-y-2 w-full">
-            <p className="text-white font-extrabold text-2xl lg:text-3xl">Gejala HIV/AIDS</p>
-            <p className="text-white text-xs lg:text-base font-semibold">
-              Mengapa Harus HIVisitScreen?? Karena HIVisitScreen merupakan
+            <p className="text-white font-extrabold text-3xl lg:text-4xl">Mengapa Harus HIVisitScreen?</p>
+            <p className="text-white text-sm lg:text-base font-semibold text-justify">
+              Karena HIVisitScreen merupakan
               media pemberi layanan yang akurat dan lengkap mengenai HIV/AIDS
               dengan model platform modern yang inovatif, mudah digunakan,
               dapat diakses siapapun dan kapanpun serta terpercaya yang
@@ -107,8 +107,13 @@ function Beranda() {
           </div>
           <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
             <div data-aos="fade-up">
-              <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full bg-info-100 lg:h-12 lg:w-12 bg-color-info-100 text-color-info-500">
-                <HiLocationMarker />
+              <div className="flex justify-center items-center mb-4 w-25 h-25 rounded-full bg-info-100 lg:h-25 lg:w-25 bg-color-info-100 text-color-info-500">
+                {/* <HiLocationMarker /> */}
+                <img
+                  src="/illustration/visit-hero.png"
+                  alt="mockup"
+                  className="w-7/8 h-7/8"
+                />
               </div>
               <h3 className="mb-2 text-xl font-bold text-color-info-500">Home Visit VCT</h3>
               <p className="text-gray-500 dark:text-gray-400">Bertemu dengan perawat ahli dibidangnya dan nikmati pelayanan atas keluhanmu</p>
@@ -131,7 +136,7 @@ function Beranda() {
                 <HiBeaker />
               </div>
               <h3 className="mb-2 text-xl font-bold text-color-info-500">Pendampingan Minum Obat</h3>
-              <p className="text-gray-500 dark:text-gray-400">Para ahli setia menememani kamu dan memberikan rekomendasi obat yang cocok dengan kondisimu</p>
+              <p className="text-gray-500 dark:text-gray-400">Para ahli siap mendampingi pengobatanmu sampai kondisimu membaik</p>
               <Button color="info" pill className="mt-4" onClick={() => navigate('/pendampingan')}>
                 Selengkapnya
               </Button>
