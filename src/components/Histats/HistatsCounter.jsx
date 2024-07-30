@@ -35,7 +35,6 @@ function HistatsCounter() {
   return (
     <div>
       {/* Konten komponen Anda */}
-      <h1 className="mb-2 font-semibold">Website Statistics</h1>
       <div ref={widgetRef} />
       {' '}
       {/* Kontainer untuk widget */}

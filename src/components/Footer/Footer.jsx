@@ -1,15 +1,47 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import { Avatar } from 'flowbite-react';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
 import {
   FaFacebookF, FaInstagram, FaMapPin, FaTiktok,
 } from 'react-icons/fa';
-import { HiMap } from 'react-icons/hi';
+// import { HiMap } from 'react-icons/hi';
 import { HiCheck } from 'react-icons/hi2';
 import { MdEmail } from 'react-icons/md';
+import axios from 'axios';
+import { HiEye } from 'react-icons/hi2';
 import HistatsCounter from '../Histats/HistatsCounter';
+
+function VisitorCounter() {
+  const [visits, setVisits] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get('https://api.api-ninjas.com/v1/counter?id=page_visit&hit=true', {
+        headers: {
+          'X-API-Key': 'QAudaNxs8BJGbbIUfYlUng==OW55mY2ZcvJVnTck', // Ganti dengan API key Anda
+        },
+      })
+      .then((response) => {
+        setVisits(response.data.value);
+      })
+      .catch((error) => {
+        console.error('Error fetching the visitor count:', error);
+      });
+  }, []);
+
+  return (
+    <div className="flex flex-col gap-y-1 font-bold">
+      Total Visitor :
+      <div className="p-2 px-4 bg-red-600 w-fit h-fit text-white font-bold inline-flex items-center gap-2">
+        <HiEye className='mr-2'/>
+        {' '}
+        {visits !== null ? visits : '...'}
+      </div>
+    </div>
+  );
+}
 
 function Footer() {
   return (
@@ -59,21 +91,13 @@ function Footer() {
               <span className="p-2 bg-green-500 rounded-full">
                 <BsWhatsapp className="w-3 h-3 text-white rounded-full" />
               </span>
-              0838
-              {' '}
-              4074
-              {' '}
-              3617
+              0838 4074 3617
             </div>
             <div className="inline-flex items-center gap-x-2 font-semibold">
               <span className="p-2 bg-green-500 rounded-full">
                 <BsWhatsapp className="w-3 h-3 text-white rounded-full" />
               </span>
-              0823
-              {' '}
-              4980
-              {' '}
-              3664
+              0823 4980 3664
             </div>
             <div className="inline-flex items-center gap-x-2 font-semibold">
               <span className="p-2 bg-red-500 rounded-full">
@@ -89,8 +113,10 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="col-span-12 lg:col-span-4">
+        <div className="col-span-12 lg:col-span-4 flex flex-col gap-y-2">
+          Online Visitor / Day Visitor :
           <HistatsCounter />
+          <VisitorCounter />
         </div>
         <hr className="col-span-12 mt-6 mb-6 border-slate-300" />
         <div className="col-span-12 lg:col-span-4 flex items-center gap-x-2">
@@ -99,12 +125,22 @@ function Footer() {
           <img src="/logo/logo.png" alt="" className="w-10 lg:w-16" />
         </div>
         <div className="col-span-12 lg:col-span-4 flex flex-col gap-y-2">
-          <h3 className="font-semibold text-sm lg:text-base"> Universitas Negeri Gorontalo</h3>
-          <p className="text-xs lg:text-sm">Jl. Jend. Sudirman, No.06 Kota Gorontalo</p>
+          <h3 className="font-semibold text-sm lg:text-base">
+            {' '}
+            Universitas Negeri Gorontalo
+          </h3>
+          <p className="text-xs lg:text-sm">
+            Jl. Jend. Sudirman, No.06 Kota Gorontalo
+          </p>
           <p className="text-xs lg:text-sm">
             Laman:
             {' '}
-            <a href="https://hivisitscreen.id/" className="underline text-color-primary-500">hivisitscreen.id</a>
+            <a
+              href="https://hivisitscreen.id/"
+              className="underline text-color-primary-500"
+            >
+              hivisitscreen.id
+            </a>
           </p>
           <p className="text-xs lg:text-sm">Email: hivisitscreen5@gmail.com</p>
         </div>
